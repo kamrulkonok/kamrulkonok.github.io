@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "Comprehensive curriculum vitae with education, experience, projects, publications, and skills.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -427,6 +427,11 @@ ninja.data = [{
           description: "Competitive intelligence platform developed and pitched as a startup prototype at UPC&#39;s entrepreneurship initiative, integrating multiple data sources for actionable insights.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/13_digiscan360/";
+            },},{id: "projects-ai-based-disease-prediction-system",
+          title: 'AI-Based Disease Prediction System',
+          description: "Built a web-based symptom checker predicting over 40 diseases using multiple machine learning algorithms, including deep neural networks for cancer detection and traditional ML models for disease classification.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/14_ai_disease_prediction/";
             },},{
         id: 'social-email',
         title: 'email',
