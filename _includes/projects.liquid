@@ -26,13 +26,18 @@
       {% endif %}
     {% endunless %}
     <div class="card-body d-flex flex-column">
-      {% unless project.redirect %}
-        <a href="{{ project.url | relative_url }}" class="card-title-link">
+      <div class="project-header">
+        {% unless project.redirect %}
+          <a href="{{ project.url | relative_url }}" class="card-title-link">
+            <h2 class="card-title">{{ project.title }}</h2>
+          </a>
+        {% else %}
           <h2 class="card-title">{{ project.title }}</h2>
-        </a>
-      {% else %}
-        <h2 class="card-title">{{ project.title }}</h2>
-      {% endunless %}
+        {% endunless %}
+      </div>
+      {% if project.year %}
+        <span class="project-year">{{ project.year }}</span>
+      {% endif %}
       <p class="card-text flex-grow-1">{{ project.description }}</p>
       
       {% if project.technologies %}

@@ -3,7 +3,8 @@ layout: page
 title: Mapping the AI Revolution - Insights for STEAM Careers in the EU
 description: Data-driven visualization project exploring how STEAM students can strategically adapt their skills and career planning to remain competitive in an AI- and automation-driven job market.
 img: assets/img/va_thumbnail.PNG
-importance: 2
+importance: 1
+year: 2025
 github: https://github.com/kamrulkonok/VisualAnalyticsProject
 technologies: HTML, CSS, D3.js, Python, Pandas
 ---

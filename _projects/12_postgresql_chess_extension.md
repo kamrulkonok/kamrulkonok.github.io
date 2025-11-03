@@ -3,7 +3,8 @@ layout: page
 title: PostgreSQL Chess Extension
 description: Created a custom PostgreSQL extension for storing and analyzing chess games, introducing chess-specific data types, functions, and indices for efficient querying.
 img: assets/img/chess_postgresql.png
-importance: 3
+importance: 4
+year: 2023
 github: https://github.com/kamrulkonok/ULB-H417-PGchess
 technologies: PostgreSQL, C, SQL, Linux, Database Systems, Indexing
 ---

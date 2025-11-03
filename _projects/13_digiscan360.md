@@ -3,7 +3,8 @@ layout: page
 title: DigiScan360
 description: Competitive intelligence platform developed and pitched as a startup prototype at UPC's entrepreneurship initiative, integrating multiple data sources for actionable insights.
 img: assets/img/digiscan_architecture.png
-importance: 4
+importance: 2
+year: 2024
 github: https://github.com/kamrulkonok/DigiScan360
 technologies: PySpark, LLMs, Microsoft Fabric, Azure Data Factory, Power BI, GraphDB, SPARQL
 ---

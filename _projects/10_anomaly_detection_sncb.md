@@ -3,7 +3,8 @@ layout: page
 title: Anomaly Detection in Diesel Train Cooling Systems
 description: Developed unsupervised models to detect anomalies in train cooling systems for the Belgian National Railway Company (SNCB), helping prevent train delays and reduce maintenance costs.
 img: assets/img/sncb_dashboard.png
-importance: 1
+importance: 3
+year: 2023
 github: https://github.com/kamrulkonok/Anomaly-Detection-in-Diesel-Train-Cooling-Systems
 technologies: Python, SQL, Scikit-learn, Pandas, NumPy, Matplotlib, Tableau
 ---
