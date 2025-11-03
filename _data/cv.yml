@@ -11,32 +11,19 @@
 - title: Research Interest
   type: list
   contents:
-    - Foundation Models, Retrieval-Augmented Generation, Information Extraction, Deep Learning, Computer Vision, Medical Imaging, Knowledge Graphs, and Big Data Analytics.
+    - Foundation Models, Retrieval-Augmented Generation, Information Extraction, Deep Learning, Computer Vision, Medical Imaging, and Knowledge Graphs.
 
 - title: Education
   type: time_table
   contents:
-    - title: Erasmus Mundus Joint Master's Degree in Big Data Management and Analytics (BDMA)
+    - title: Erasmus Mundus Master's Degree in Big Data Management and Analytics
+      institution: CentraleSupélec, Université Paris-Saclay | Universitat Politècnica de Catalunya (UPC) | Université libre de Bruxelles (ULB)
       year: Sept 2023 -- Oct 2025
-      description: []
-    - title: Master Sciences de l'Ingénieur
-      institution: CentraleSupélec, Université Paris-Saclay
-      year: Sept 2024 -- Oct 2025
-      location: Gif-sur-Yvette, France
+      location: Gif-sur-Yvette, France | Barcelona, Spain | Brussels, Belgium
       description:
         - title: Thesis
           contents:
             - "SecBPMN-GPT: A Hybrid LLM & Rule-Based Framework for Automating Security Annotation in Business Process Models"
-    - title: Erasmus Mundus Master Degree in Big Data Management and Analytics
-      institution: Universitat Politècnica de Catalunya (UPC)
-      year: Feb 2024 -- July 2024
-      location: Barcelona, Spain
-      description: []
-    - title: Master of Science in Computer Science and Engineering
-      institution: Université libre de Bruxelles (ULB)
-      year: Sept 2023 -- Jan 2024
-      location: Brussels, Belgium
-      description: []
     - title: Bachelor of Engineering in Software Engineering
       institution: Sichuan University
       year: Mar 2018 -- Jan 2022

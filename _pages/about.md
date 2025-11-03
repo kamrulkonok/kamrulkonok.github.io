@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Aspiring PhD Student | Research Engineer | Software Engineer
+subtitle: Mathematics reveals the patterns of the universe; code transforms them into real-world impact. — that's the journey I'm on. 🚀
 
 profile:
   align: right
@@ -25,16 +25,20 @@ latest_posts:
   enabled: false
 ---
 
-I specialize in Big Data Management, Deep Learning, and Foundation Models. I have hands-on experience building scalable pipelines and intelligent systems in healthcare and cybersecurity.
+I am an AI Research Engineer passionate about building intelligent systems that combine learning and reasoning.
 
-I have recently graduated with an Erasmus Mundus Joint Master's Degree in Big Data Management and Analytics (BDMA) from CentraleSupélec, Université Paris-Saclay, with prior studies at Universitat Politècnica de Catalunya (UPC) and Université libre de Bruxelles (ULB). Previously, I earned my Bachelor of Engineering degree in Software Engineering from Sichuan University, China. My academic journey has taken me across China, Belgium, Spain, and now France. I love learning new languages, and I speak English and Chinese fluently, as well as a bit of French. I am currently seeking PhD opportunities to further advance my research in AI and machine learning, with the goal of building a career as an academic researcher and contributing to advancements in the field of AI.
+**Education**  
+I earned my <span style="color: #00a86b; font-weight: bold;">Erasmus Mundus Master's Degree in Big Data Management and Analytics</span> from CentraleSupélec, Université Paris-Saclay, with prior studies at UPC Barcelona and ULB Brussels. I also hold a Bachelor's degree in Software Engineering from Sichuan University, China.
 
+**Research Highlights**  
+My master's thesis, SecBPMN-GPT, introduces a hybrid framework that integrates large language models and RAG to automate cybersecurity annotations in business process models. Previously, I worked at LISN, CentraleSupélec, where I contributed to research on geometric deep learning frameworks for medical imaging.
 
-Most recently, I worked as a Research Engineer Intern at LISSI, Université Paris-Est Créteil, in collaboration with CEA–LIST, where I developed a hybrid LLM and rule-based framework for automating security annotation in business process models. I am currently working on this project for a dedicated publication. Previously, I worked as a Graduate Research Assistant at LISN, CentraleSupélec, on unsupervised deep-learning frameworks for medical imaging analysis. My work focuses on leveraging large language models, knowledge graphs, and advanced machine learning techniques to solve complex problems in cybersecurity, medical imaging, and data analytics.
+**Expertise**  
+I have hands-on experience with <span style="color: #00a86b; font-weight: bold;">Python, PyTorch, Large Language Models (LLMs), information extraction, retrieval-augmented generation (RAG), medical imaging, and knowledge graphs</span>.
 
 ## Research Interests
 
-Foundation Models, Deep Learning, Medical Imaging, Big Data Analytics
+Foundation Models, Retrieval-Augmented Generation, Information Extraction, Deep Learning, Computer Vision, Medical Imaging, Knowlegde Graphs
 
 ## Hobbies
 
