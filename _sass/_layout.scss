@@ -273,6 +273,15 @@ body.sticky-bottom-footer {
 
 // Article Content
 article {
+  // About page: prevent section header underline from running under the floated profile image.
+  .profile + .clearfix {
+    h2 {
+      display: inline-block;
+      width: fit-content;
+      max-width: 100%;
+    }
+  }
+
   .clearfix {
     line-height: 1.75;
     
