@@ -9,7 +9,7 @@ horizontal: false
 ---
 
 <div class="projects">
-  {% assign sorted_projects = site.projects | sort: "importance" %}
+  {% assign sorted_projects = site.projects | where_exp: "p", "p.published != false" | sort: "importance" %}
   {% assign research_projects = sorted_projects | where: "research", true %}
   {% assign other_projects = sorted_projects | where_exp: "item", "item.research != true" %}
 
