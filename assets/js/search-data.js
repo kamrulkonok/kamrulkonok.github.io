@@ -422,9 +422,9 @@ ninja.data = [{
           description: "Created a custom PostgreSQL extension for storing and analyzing chess games, introducing chess-specific data types, functions, and indices for efficient querying.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/12_postgresql_chess_extension/";
-            },},{id: "projects-digiscan360",
-          title: 'DigiScan360',
-          description: "Competitive intelligence platform developed and pitched as a startup prototype at UPC&#39;s entrepreneurship initiative, integrating multiple data sources for actionable insights.",
+            },},{id: "projects-digiscan360-end-to-end-data-amp-semantic-intelligence-for-competitive-analysis",
+          title: 'DigiScan360 — End-to-End Data &amp;amp; Semantic Intelligence for Competitive Analysis',
+          description: "An end-to-end data and semantic intelligence system for scalable competitive analysis across heterogeneous market data.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/13_digiscan360/";
             },},{id: "projects-ai-based-disease-prediction-system",
@@ -432,6 +432,16 @@ ninja.data = [{
           description: "Built a web-based symptom checker predicting over 40 diseases using multiple machine learning algorithms, including deep neural networks for cancer detection and traditional ML models for disease classification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/14_ai_disease_prediction/";
+            },},{id: "projects-unsupervised-chest-x-ray-clustering-with-group-equivariant-convolutions",
+          title: 'Unsupervised Chest X-ray Clustering with Group Equivariant Convolutions',
+          description: "Group-equivariant deep clustering for chest X-rays with faster convergence and clearer clusters, without data augmentation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/15_bdrp_geometric_deep_learning/";
+            },},{id: "projects-brain-tumor-detection-and-classification-using-convolutional-neural-networks",
+          title: 'Brain Tumor Detection and Classification Using Convolutional Neural Networks',
+          description: "Undergraduate thesis on CNN-based brain tumor classification, comparing VGG-16, Xception, ResNet-50, and Inception-V3 on MRI data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/16_brain_tumor_cnn/";
             },},{
         id: 'social-email',
         title: 'email',
