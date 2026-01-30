@@ -5,6 +5,7 @@ description: Developed unsupervised models to detect anomalies in train cooling 
 img: assets/img/sncb_dashboard.png
 importance: 3
 year: 2023
+semester: Fall 2023
 github: https://github.com/kamrulkonok/Anomaly-Detection-in-Diesel-Train-Cooling-Systems
 technologies: Python, SQL, Scikit-learn, Pandas, NumPy, Matplotlib, Tableau
 ---

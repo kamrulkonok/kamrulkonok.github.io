@@ -5,6 +5,7 @@ description: Created a custom PostgreSQL extension for storing and analyzing che
 img: assets/img/chess_postgresql.png
 importance: 4
 year: 2023
+semester: Fall 2023
 github: https://github.com/kamrulkonok/ULB-H417-PGchess
 technologies: PostgreSQL, C, SQL, Linux, Database Systems, Indexing
 ---

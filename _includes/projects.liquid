@@ -3,26 +3,16 @@
     {% unless project.redirect %}
       {% if project.img %}
         <a href="{{ project.url | relative_url }}" class="card-img-link">
-          {%
-            include figure.liquid
-            loading="eager"
-            path=project.img
-            sizes = "250px"
-            alt="project thumbnail"
-            class="card-img-top"
-          %}
+          <div class="project-card-img-wrap">
+            {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 50vw, 100vw" alt="project thumbnail" class="card-img-top" %}
+          </div>
         </a>
       {% endif %}
     {% else %}
       {% if project.img %}
-        {%
-          include figure.liquid
-          loading="eager"
-          path=project.img
-          sizes = "250px"
-          alt="project thumbnail"
-          class="card-img-top"
-        %}
+        <div class="project-card-img-wrap">
+          {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 50vw, 100vw" alt="project thumbnail" class="card-img-top" %}
+        </div>
       {% endif %}
     {% endunless %}
     <div class="card-body d-flex flex-column">
@@ -35,13 +25,13 @@
           <h2 class="card-title">{{ project.title }}</h2>
         {% endunless %}
       </div>
-      {% if project.year %}
-        <span class="project-year">{{ project.year }}</span>
+      {% if project.semester or project.year %}
+        <span class="project-year">{{ project.semester | default: project.year }}</span>
       {% endif %}
       <p class="card-text flex-grow-1">{{ project.description }}</p>
       
       {% if project.technologies %}
-        <div class="project-technologies {% unless project.github %}mb-0{% else %}mb-3{% endunless %}">
+        <div class="project-technologies {% if project.redirect and project.github %}mb-3{% elsif project.redirect %}mb-0{% else %}mb-3{% endif %}">
           <div class="tech-tags">
             {% assign tech_list = project.technologies | split: ", " %}
             {% for tech in tech_list %}
@@ -51,13 +41,24 @@
         </div>
       {% endif %}
       
-      {% if project.github %}
+      {% unless project.redirect %}
+        <div class="project-footer mt-auto">
+          <a href="{{ project.url | relative_url }}" class="project-detail-link" onclick="event.stopPropagation();">
+            View details <i class="fa-solid fa-arrow-right fa-sm ms-1"></i>
+          </a>
+          {% if project.github %}
+            <a href="{{ project.github }}" class="github-link d-block mt-1" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+          {% endif %}
+        </div>
+      {% elsif project.github %}
         <div class="project-footer mt-auto">
           <a href="{{ project.github }}" class="github-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
             <i class="fa-brands fa-github"></i> View on GitHub
           </a>
         </div>
-      {% endif %}
+      {% endunless %}
     </div>
     {% unless project.redirect %}
       <a href="{{ project.url | relative_url }}" class="card-overlay-link"></a>

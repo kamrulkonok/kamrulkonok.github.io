@@ -23,6 +23,10 @@ hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 table {
   td,
   th {
@@ -840,12 +844,43 @@ footer.sticky-bottom {
       border-color: var(--global-theme-color);
     }
     
-    img {
-      width: 100%;
-      transition: transform 0.3s ease;
+    .project-card-img-wrap {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0.75rem;
+      background: var(--global-code-bg-color);
+      box-sizing: border-box;
+
+      figure {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      picture {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+        transition: transform 0.3s ease;
+      }
     }
-    
-    &:hover img {
+
+    &:hover .project-card-img-wrap img {
       transform: scale(1.03);
     }
     
@@ -870,11 +905,12 @@ footer.sticky-bottom {
       
       .project-year {
         display: inline-block;
+        width: fit-content;
         font-size: 0.75rem;
         font-weight: 600;
         color: var(--global-theme-color);
         white-space: nowrap;
-        padding: 0.15rem 0.3rem 0.15rem 0.3rem;
+        padding: 0.15rem 0.4rem;
         background: var(--global-code-bg-color);
         border: 1px solid var(--global-divider-color);
         border-radius: 0.3rem;
@@ -933,6 +969,23 @@ footer.sticky-bottom {
         border-top: 1px solid var(--global-divider-color);
         position: relative;
         z-index: 2;
+        
+        .project-detail-link {
+          display: inline-flex;
+          align-items: center;
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: var(--global-theme-color);
+          text-decoration: none;
+          transition: all 0.3s ease;
+          position: relative;
+          z-index: 3;
+          
+          &:hover {
+            color: var(--global-theme-color);
+            text-decoration: underline;
+          }
+        }
         
         .github-link {
           display: inline-flex;
@@ -1009,15 +1062,37 @@ footer.sticky-bottom {
     margin-bottom: 10px;
   }
 
-  h2.category {
-    color: var(--global-text-color-light);
+  h2.category.category-bar {
+    color: var(--global-text-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
     border-bottom: 2px solid var(--global-divider-color);
+    padding-bottom: 0.75rem;
     padding-top: 0.75rem;
-    margin-top: 3rem;
     margin-bottom: 1.5rem;
-    text-align: right;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    text-align: left;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: var(--global-theme-color);
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100px;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 }
 

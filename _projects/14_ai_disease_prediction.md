@@ -5,6 +5,7 @@ description: Built a web-based symptom checker predicting over 40 diseases using
 img: assets/img/AI-disease-prediction.png
 importance: 5
 year: 2021
+semester: Spring 2021
 github: https://github.com/kamrulkonok/disease_prediction_system
 technologies: Python, Scikit-learn, Django, React.js, TensorFlow, Keras, REST APIs, Bootstrap, Material-UI
 ---
