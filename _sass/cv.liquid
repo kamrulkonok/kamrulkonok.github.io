@@ -9,8 +9,8 @@ sitemap: false
 {% unless site.data.resume %}
   <div class="post">
     <header class="post-header">
-      <h1 class="post-title cv-post-title">
-        <span class="cv-title-text">{{ page.title }}</span>
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="post-title mb-0">{{ page.title }}</h1>
         {% if page.cv_pdf %}
           <a
             {% if page.cv_pdf contains '://' %}
@@ -20,13 +20,14 @@ sitemap: false
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
-            class="btncv btncv-main"
+            class="btn btn-sm btn-outline-primary"
+            title="Download CV (PDF)"
           >
-            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
-            <span class="cv-btn-label">Download CV (PDF)</span>
+            Download CV
+            <i class="fa-solid fa-file-pdf"></i>
           </a>
         {% endif %}
-      </h1>
+      </div>
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
@@ -66,8 +67,8 @@ sitemap: false
 {% else %}
   <div class="post">
     <header class="post-header">
-      <h1 class="post-title cv-post-title">
-        <span class="cv-title-text">{{ page.title }}</span>
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="post-title mb-0">{{ page.title }}</h1>
         {% if page.cv_pdf %}
           <a
             {% if page.cv_pdf contains '://' %}
@@ -77,13 +78,14 @@ sitemap: false
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
-            class="btncv btncv-main"
+            class="btn btn-sm btn-outline-primary"
+            title="Download CV (PDF)"
           >
-            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
-            <span class="cv-btn-label">Download CV (PDF)</span>
+            Download CV
+            <i class="fa-solid fa-file-pdf"></i>
           </a>
         {% endif %}
-      </h1>
+      </div>
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}

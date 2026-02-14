@@ -1,16 +1,11 @@
 ---
 layout: default
-title: cv layout (hidden)
-permalink: /_hidden/cv-layout-copy/
-nav: false
-published: false
-sitemap: false
 ---
 {% unless site.data.resume %}
   <div class="post">
     <header class="post-header">
-      <h1 class="post-title cv-post-title">
-        <span class="cv-title-text">{{ page.title }}</span>
+      <h1 class="post-title">
+        {{ page.title }}
         {% if page.cv_pdf %}
           <a
             {% if page.cv_pdf contains '://' %}
@@ -20,10 +15,11 @@ sitemap: false
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
-            class="btncv btncv-main"
+            class="float-right btn btn-sm btn-outline-primary"
+            title="Download CV (PDF)"
+            aria-label="Download CV (PDF)"
           >
-            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
-            <span class="cv-btn-label">Download CV (PDF)</span>
+            <i class="fa-solid fa-file-pdf fa-lg text-danger"></i>
           </a>
         {% endif %}
       </h1>
@@ -66,8 +62,8 @@ sitemap: false
 {% else %}
   <div class="post">
     <header class="post-header">
-      <h1 class="post-title cv-post-title">
-        <span class="cv-title-text">{{ page.title }}</span>
+      <h1 class="post-title">
+        {{ page.title }}
         {% if page.cv_pdf %}
           <a
             {% if page.cv_pdf contains '://' %}
@@ -77,10 +73,11 @@ sitemap: false
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
-            class="btncv btncv-main"
+            class="float-right btn btn-sm btn-outline-primary"
+            title="Download CV (PDF)"
+            aria-label="Download CV (PDF)"
           >
-            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
-            <span class="cv-btn-label">Download CV (PDF)</span>
+            <i class="fa-solid fa-file-pdf fa-lg text-danger"></i>
           </a>
         {% endif %}
       </h1>

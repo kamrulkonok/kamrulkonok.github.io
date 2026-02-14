@@ -113,6 +113,93 @@ a.btncv:hover {
   transform: translateY(-1px);
 }
 
+/* CV download button – theme-aligned, prominent CTA */
+a.btncv-main {
+  --btncv-bg: var(--global-theme-color);
+  --btncv-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  --btncv-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.18);
+  background: var(--btncv-bg);
+  color: var(--global-hover-text-color) !important;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--btncv-shadow);
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+a.btncv-main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 50%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+a.btncv-main i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+a.btncv-main:hover {
+  color: var(--global-hover-text-color) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--btncv-shadow-hover);
+  filter: brightness(1.08);
+}
+
+a.btncv-main:hover i {
+  transform: scale(1.1);
+}
+
+a.btncv-main:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+a.btncv-main:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+
+.cv-post-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cv-title-text {
+  flex: 1 1 auto;
+}
+
+.cv-post-title .btncv-main {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 576px) {
+  .cv-post-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /*****************************
  * CV TIME_TABLE styles
  *****************************/

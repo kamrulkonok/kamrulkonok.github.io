@@ -12,7 +12,7 @@ technologies: PySpark, LLMs, Microsoft Fabric, Azure Data Factory, Power BI, Gra
 
 ## Team
 
-[Hareem Raza](https://github.com/hareemraza), [Md Kamrul Islam](https://github.com/kamrulkonok), [Muhammad Qasim Khan](https://github.com/QasimKhan5x), and [Narmina Mahmudova](https://github.com/nmahmudova)
+[Md Kamrul Islam](https://github.com/kamrulkonok), [Hareem Raza](https://github.com/hareemraza), [Muhammad Qasim Khan](https://github.com/QasimKhan5x), and [Narmina Mahmudova](https://github.com/nmahmudova)
 
 <nav class="research-nav mb-3 py-3" aria-label="Page sections">
   <div class="d-flex flex-wrap justify-content-center gap-2 gap-md-3">
@@ -27,31 +27,31 @@ technologies: PySpark, LLMs, Microsoft Fabric, Azure Data Factory, Power BI, Gra
 
 ## Overview
 
-DigiScan360 is an end-to-end data and semantic intelligence system designed to address the challenges of competitive analysis in modern digital markets. Market-relevant information is inherently fragmented across e-commerce platforms, expert review websites, and social media, spanning structured records, semi-structured logs, and unstructured text. Traditional analytics pipelines—largely centered on relational models—are insufficient to integrate these sources holistically or to capture complex relationships between products, brands, and consumer behavior.
+DigiScan360 is an end-to-end intelligence system designed to address the challenges of competitive analysis in modern digital markets for headphone companies. Market-relevant information is inherently fragmented across e-commerce platforms, expert review websites, and social media, spanning structured records, semi-structured logs, and unstructured text. Traditional analytics pipelines largely centered on relational models—are insufficient to integrate these sources holistically or to capture complex relationships between products, brands, and consumer behavior.
 
-This project unifies large-scale data ingestion, distributed processing, analytical modeling, and graph-based semantic representations within a single architecture. By combining lakehouse-based analytics with knowledge graph modeling and metadata-aware integration, DigiScan360 enables both quantitative analysis and relationship-driven reasoning over heterogeneous market data. The system is designed to be scalable, extensible, and reproducible, supporting descriptive, predictive, and semantic analytics in competitive intelligence scenarios.
+This project unifies large-scale data ingestion, distributed processing, analytical modeling, and graph-based semantic representations within a single architecture. By combining data warehouse analytics with knowledge graph modeling and metadata-aware integration, DigiScan360 enables both quantitative analysis and relationship-driven reasoning over heterogeneous market data.
 
 ## Design Objectives
 
 - **Integrate heterogeneous data** — Structured and unstructured data from multiple external sources  
 - **Preserve raw data fidelity** — Enable scalable, distributed transformations while maintaining data integrity  
-- **Enrich with semantic representations** — Analytical datasets augmented with graph-based and semantic models  
-- **Support multi-mode analytics** — Descriptive, predictive, and relational analytics from a shared data foundation  
-- **Enable extensibility** — Traceability and schema evolution through metadata-aware design  
+- **Enrich with semantic representations** — Large-scale datasets augmented with graph-based and semantic models
+- **Support multi-mode analytics** — Descriptive, predictive, and relational analytics
+- **Enable extensibility** — Traceability and schema evolution through knowledge graph-based metadata
 
 ## Key Contributions
 
-- Designed an end-to-end, reproducible data and semantic intelligence pipeline
-- Integrated lakehouse analytics with knowledge graphs and metadata-aware modeling
-- Formalized LLM-based feature engineering using BPMN workflows
-- Enabled multi-modal analytics combining relational, semantic, and vector-based methods
+- Designed an end-to-end, reproducible big data and semantic intelligence pipeline
+- Integrated data warehouse analytics with knowledge graphs and metadata-aware modeling
+- Formalized sentiment, weaknesses, and strengths analysis as feature engineering using LLMs
+- Enabled multi-modal analytics and storytelling the outcomes using PowerBI dashboard
 
 
 ## System Architecture
 
-DigiScan360 follows a layered, end-to-end architecture that integrates heterogeneous data ingestion, scalable storage, distributed processing, semantic modeling, and analytical exploitation. Data flows through progressively refined stages—from raw source data to curated analytical tables and semantic graphs—while preserving lineage and traceability.
+DigiScan360 follows a layered, end-to-end architecture that integrates heterogeneous data ingestion, scalable storage, distributed processing, semantic modeling, and analytical exploitation. Data flows through progressively refined stages from raw source data to curated analytical tables and semantic graphs while preserving lineage and traceability.
 
-The architecture intentionally combines a lakehouse-based analytical backbone with graph-based semantic representations. Relational models support scalable quantitative analysis, while knowledge graphs capture higher-order relationships between products, brands, consumers, and content. This dual modeling strategy enables both traditional business intelligence and relationship-driven reasoning within a single system.
+The architecture combines a data warehouse-based analytical backbone with graph-based semantic representations. Relational models support scalable quantitative analysis, while knowledge graphs capture higher-order relationships between products, brands, consumers, and content.
 
 <figure class="figure mt-4 mb-4">
   <img src="{{ 'assets/img/projects/digiscan360/digiscan_architecture.png' | relative_url }}" alt="DigiScan360 system architecture" class="figure-img img-fluid rounded" loading="lazy" />
@@ -64,9 +64,9 @@ The architecture intentionally combines a lakehouse-based analytical backbone wi
 
 ### Data collection
 
-Data is collected from **e-commerce platforms** (Amazon, MediaMarkt), **expert review websites** (CNET), and **social media platforms** (Facebook, X/Twitter). Source-specific Python collectors encapsulate extraction logic while emitting standardized outputs, isolating downstream processing from source-specific changes and enabling extensibility.
+Data is collected from **e-commerce platforms** (Amazon, MediaMarkt), **expert review websites** (CNET), and **social media platforms** (Facebook, Twitter). Source-specific Python collectors encapsulate extraction logic while emitting standardized outputs, isolating downstream processing from source-specific changes and enabling extensibility.
 
-For platforms with restricted or costly API access, synthetic datasets are generated based on official API specifications and augmented with noise and missing values to realistically simulate real-world conditions. All collection processes are logged and versioned to support reproducibility and auditing.
+For Facebook and Twitter with restricted or costly API access, synthetic datasets are generated based on official API specifications and augmented with noise and missing values to realistically simulate real-world conditions. All collection processes are logged and versioned to support reproducibility and auditing.
 
 ### Storage and landing design
 
@@ -99,11 +99,9 @@ Engineered features are materialized as versioned tables in the lakehouse and se
 
 In addition to statistical and embedding-based features, DigiScan360 integrates a controlled LLM-based enrichment workflow to extract qualitative semantic insights such as product and brand strengths and weaknesses. LLM outputs are treated as structured analytical features rather than free-form text.
 
-The LLM workflow is explicitly modeled as a **BPMN process**, incorporating conditional execution paths to handle external inference availability and local fallback execution. Generated features are persisted in the lakehouse and copied to the data warehouse for downstream analytics.
-
 <figure class="figure mt-4 mb-4">
   <img src="{{ 'assets/img/projects/digiscan360/ecommerce-data-formatter.png' | relative_url }}" alt="LLM enrichment workflow for semantic feature generation" class="figure-img img-fluid rounded" loading="lazy" />
-  <figcaption class="figure-caption text-center mt-2"><strong>Figure 2.</strong> BPMN-modeled LLM enrichment workflow for semantic feature generation.</figcaption>
+  <figcaption class="figure-caption text-center mt-2"><strong>Figure 2.</strong> LLM-based enrichment workflow for semantic feature generation.</figcaption>
 </figure>
 
 ## Formatting and Exploitation
@@ -115,7 +113,7 @@ The formatting and exploitation layer bridges large-scale data processing with d
 DigiScan360 employs complementary graph paradigms:
 
 - A **Knowledge Graph** implemented in **GraphDB** using RDF and SPARQL to support semantic interoperability, metadata management, and ontology-driven reasoning  
-- A **Property Graph** implemented using **Neo4j** to enable efficient traversal-based analysis of product–feature and brand–interaction relationships  
+- A **Property Graph** implemented using **Neo4j** to enable efficient traversal-based analysis of product and brand relationships
 
 Local schemas are mapped to global schemas using a **Local-as-View (LAV)** approach, enabling controlled integration and schema evolution.
 
@@ -123,11 +121,11 @@ Local schemas are mapped to global schemas using a **Local-as-View (LAV)** appro
 
 - Vector embeddings are indexed in **Pinecone** to support efficient similarity-based product comparison  
 - **LLaMA-3**, accessed via the Groq API, is used for sentiment analysis and semantic insight extraction  
-- A fault-tolerant execution strategy prioritizes external inference with local fallback for robustness  
+- A fault-tolerant execution strategy prioritizes external inference
 
 ## Semantic and Graph-Based Modeling
 
-To overcome the limitations of purely relational models in representing complex, evolving relationships, DigiScan360 incorporates a semantic and graph-based modeling layer. This layer provides a unified, machine-interpretable representation of domain entities and relationships, while explicitly modeling metadata such as provenance, schema mappings, and transformation logic. Treating metadata as a first-class graph entity enables traceability, controlled schema evolution, and reproducible integration. The end-to-end semantic integration process is explicitly formalized using a BPMN workflow.
+To overcome the limitations of purely relational models in representing complex, evolving relationships, DigiScan360 incorporates a semantic and graph-based modeling layer. This layer provides a unified, machine-interpretable representation of domain entities and relationships, while explicitly modeling metadata such as provenance, schema mappings, and transformation logic. Treating metadata as a first-class graph entity enables traceability, controlled schema evolution, and reproducible integration.
 
 <figure class="figure mt-4 mb-4">
   <img src="{{ 'assets/img/projects/digiscan360/semantic_integration_bpmn.png' | relative_url }}" alt="End-to-end semantic integration BPMN workflow" class="figure-img img-fluid rounded" loading="lazy" />
@@ -137,8 +135,7 @@ To overcome the limitations of purely relational models in representing complex,
 Key aspects include:
 
 - Global semantic schema design  
-- Local-to-global schema mappings  
-- Declarative graph construction  
+- Local-to-global schema mappings 
 - Graph-based metadata and provenance management  
 - BPMN-modeled semantic integration  
 - Relationship-centric analytical queries  
@@ -147,12 +144,12 @@ Key aspects include:
 
 The analytical exploitation layer operationalizes the DigiScan360 pipeline by exposing curated analytical and semantic data through interactive views. Engineered features are materialized in a star-schema data warehouse and accessed through analytical queries optimized for descriptive and comparative analysis.
 
-Business intelligence dashboards serve as both an exploitation and validation layer, enabling systematic exploration of market dynamics, brand performance, and consumer engagement, while validating upstream ingestion, processing, and modeling decisions.
+Business intelligence dashboards using PowerBI serve as both an exploitation and validation layer, enabling systematic exploration of market dynamics, brand performance, and consumer engagement, while validating upstream ingestion, processing, and modeling decisions.
 
 <figure class="figure mt-4 mb-4">
   <img src="{{ 'assets/img/projects/digiscan360/twitter_competitor_analysis.png' | relative_url }}" alt="Twitter competitor analysis dashboard" class="figure-img img-fluid rounded mb-3" loading="lazy" />
   <img src="{{ 'assets/img/projects/digiscan360/facebook_page_analysis.png' | relative_url }}" alt="Facebook page analysis dashboard" class="figure-img img-fluid rounded" loading="lazy" />
-  <figcaption class="figure-caption text-center mt-2"><strong>Figure 4.</strong> Analytical exploitation through business intelligence dashboards built on curated warehouse tables.</figcaption>
+  <figcaption class="figure-caption text-center mt-2"><strong>Figure 4.</strong> Analytical exploitation through PowerBI dashboards built on curated warehouse tables.</figcaption>
 </figure>
 
 Key outcomes include:
@@ -165,4 +162,4 @@ Key outcomes include:
 
 ## Technologies
 
-PySpark, LLMs, Microsoft Fabric, Azure Data Factory, Power BI, GraphDB, SPARQL
+Python, PySpark, LLMs, Microsoft Fabric, Azure Data Factory, Power BI, GraphDB, SPARQL

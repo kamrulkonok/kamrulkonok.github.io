@@ -25,43 +25,30 @@ latest_posts:
   enabled: false
 ---
 
-I am an AI Research Engineer with a strong foundation in big data systems, machine learning, and applied artificial intelligence.
+Building AI-driven systems at the intersection of foundation models, medical imaging, and big data, bridging research and real-world deployment.
 
 ## Education
 
-I earned the Erasmus Mundus Joint Master’s Degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/), a highly competitive programme funded by the European Commission.
-
-The selection process is extremely selective: in my cohort, only 26 students were admitted from over 1,000 applicants.
-
-The curriculum is jointly delivered by leading European institutions, including:
-- Université Libre de Bruxelles (ULB), Belgium
-- Universitat Politècnica de Catalunya (UPC), Spain
-- University of Padua (UniPD), Italy
-- Technische Universiteit Eindhoven (TU/e), the Netherlands
-- CentraleSupélec (Université Paris-Saclay), France
-
-Through BDMA, I completed advanced coursework and research across CentraleSupélec, UPC Barcelona, and ULB Brussels, building a strong command of data engineering pipelines, distributed analytics, advanced machine learning, and research-oriented evaluation.
-
-I previously completed a Bachelor of Engineering in Software Engineering at [Sichuan University, China](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm), where I consistently achieved high academic results and graduated with distinction. In recognition of my academic performance, I was awarded the Belt and Road Initiative Scholarship, a competitive, fully funded scholarship supported by the Chinese Government.
+- Erasmus Mundus Joint Master’s Degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/), completed across CentraleSupélec (Université Paris-Saclay), Universitat Politècnica de Catalunya (BarcelonaTech), and Université Libre de Bruxelles (Brussels); funded by a highly competitive Erasmus Mundus scholarship (24 awards out of ~1,000 applicants).
+- Bachelor of Engineering in Software Engineering at [Sichuan University, China](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm); graduated with distinction and received the fully funded Belt and Road Initiative Scholarship throughout my studies in recognition of consistent outstanding academic performance.
 
 ## Research Highlights
 
-My master’s thesis, **SecBPMN2 Assistant**, proposes a hybrid LLM-based framework that combines retrieval-augmented generation with rule-based validation to automate cybersecurity annotations in business process models. The goal is to reduce expert annotation effort while improving annotation quality—showing the value of hybrid reasoning for applied NLP and security-aware process modeling.
+My research focuses on combining robust representation learning and large language models with high-impact domains such as cybersecurity, healthcare, and business process management.
 
-Previously, at LISN (CentraleSupélec), I worked on ["Unsupervised chest X-ray clustering with group-equivariant convolutions"]({{ '/projects/15_bdrp_geometric_deep_learning/' | relative_url }}), where I developed unsupervised deep clustering frameworks based on group-equivariant CNNs. By explicitly encoding geometric symmetries into the network architecture, this work improved representation learning and cluster separability, while substantially reducing dependence on data augmentation and large labeled datasets.
-
-During my undergraduate studies, I completed a thesis titled [“Brain Tumor Detection and Classification Using Convolutional Neural Networks”]({{ '/projects/16_brain_tumor_cnn/' | relative_url }}). The project focused on designing and training CNN architectures for multi-class tumor classification from brain MRI scans, with careful attention to preprocessing, evaluation metrics, and robustness.
+- **Master’s thesis – SecBPMN2 Assistant:** A hybrid LLM-based framework that combines retrieval-augmented generation with rule-based validation to automate cybersecurity annotations in business process models, reducing expert effort while improving annotation quality.
+- **Graduate Research Assistant (CentraleSupélec) – Unsupervised chest X-ray clustering with group-equivariant convolutions:** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs to improve representation learning and cluster separability while reducing reliance on data augmentation and large labeled datasets. See project: ["Unsupervised chest X-ray clustering with group-equivariant convolutions"]({{ '/projects/15_bdrp_geometric_deep_learning/' | relative_url }}).
+- **Undergraduate thesis – Brain Tumor Detection and Classification Using CNNs:** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [“Brain Tumor Detection and Classification Using Convolutional Neural Networks”]({{ '/projects/16_brain_tumor_cnn/' | relative_url }}).
 
 ## Expertise
 
-I have hands-on experience with:
-<span style="color: #00a86b; font-weight: bold;">
-Python, PyTorch, Large Language Models (LLMs), Information Extraction, Retrieval-Augmented Generation (RAG), Deep Learning, Medical Imaging, Knowledge Graphs, and Scalable Data Pipelines
-</span>.
+- **Core ML & AI:** Python, PyTorch, Deep Learning, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG)
+- **Data & Systems:** Big data systems, distributed data pipelines, data engineering, data mining
+- **Domains:** AI in healthcare, medical imaging, security-aware business process modeling, knowledge graphs
 
 ## Research Interests
 
-Large Language Models · Retrieval-Augmented Generation · Information Extraction · Deep Learning · Self-Supervised Learning · Knowledge Graphs · Data Mining · AI in healthcare
+Large Language Models · Retrieval-Augmented Generation · Information Extraction · Knowledge Graphs · Deep Learning · Data Mining · AI in healthcare
 
 ## Hobbies
 
