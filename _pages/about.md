@@ -9,9 +9,10 @@ profile:
   image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>+33 6 52 24 36 55</p>
+    <p>+8801864208599</p>
     <p>Paris, France</p>
     <p><a href="mailto:mdkamrul.islam@student-cs.fr">mdkamrul.islam@student-cs.fr</a></p>
+    <p><a href="mailto:mdkamrul.islam@hotmail.com">mdkamrul.islam@hotmail.com</a></p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
