@@ -20,11 +20,65 @@
     "
   >
     <div class="mapmyvisitors-measure" style="width: 100%; max-width: 520px; margin: 0 auto;">
-      <script
-        type="text/javascript"
-        id="mapmyvisitors"
-        src="https://mapmyvisitors.com/map.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&cl=ffffff&w=a&t=m"
-      ></script>
+      <div class="mapmyvisitors-slot"></div>
     </div>
   </div>
 </div>
+
+<script>
+  (function () {
+    const DAY_SRC =
+      "https://mapmyvisitors.com/map.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&cl=ffffff&w=a&t=m";
+    const NIGHT_SRC =
+      "https://mapmyvisitors.com/map.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&cl=0e1633&w=a&t=m&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9";
+
+    const embed = document.currentScript?.previousElementSibling;
+    if (!embed) return;
+    const slot = embed.querySelector(".mapmyvisitors-slot");
+    if (!slot) return;
+
+    function getTheme() {
+      const html = document.documentElement;
+      const t = html.getAttribute("data-theme");
+      if (t === "dark" || t === "light") return t;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function cleanup() {
+      // Widget script refuses to re-embed if this exists.
+      const widget = document.getElementById("mapmyvisitors-widget");
+      if (widget) widget.remove();
+
+      // Remove any previous script tag we injected.
+      const prev = slot.querySelector("#mapmyvisitors");
+      if (prev) prev.remove();
+
+      // Clear any leftover nodes the script appended after itself.
+      slot.innerHTML = "";
+    }
+
+    function render(theme) {
+      cleanup();
+
+      const s = document.createElement("script");
+      s.type = "text/javascript";
+      s.id = "mapmyvisitors";
+      s.src = theme === "dark" ? NIGHT_SRC : DAY_SRC;
+      slot.appendChild(s);
+    }
+
+    let lastTheme = null;
+    function ensure() {
+      const theme = getTheme();
+      if (theme === lastTheme) return;
+      lastTheme = theme;
+      render(theme);
+    }
+
+    ensure();
+
+    // Re-render when the site's theme toggles.
+    const mo = new MutationObserver(ensure);
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  })();
+</script>
