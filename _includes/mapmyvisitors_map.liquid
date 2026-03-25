@@ -107,6 +107,8 @@
 
     const DATA_URL_BASE =
       "https://mapmyvisitors.com/widget_call_home.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&w=520&t=m&cl=ffffff";
+    const TRACKING_SRC =
+      "https://mapmyvisitors.com/map.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&cl=ffffff&w=a&t=m";
 
     function getTheme() {
       const t = document.documentElement.getAttribute("data-theme");
@@ -218,6 +220,28 @@
 
         document.head.appendChild(script);
       });
+    }
+
+    function trackVisitOncePerSession() {
+      const TRACK_KEY = "visitor_map_visit_tracked";
+      if (sessionStorage.getItem(TRACK_KEY) === "1") return;
+
+      const script = document.createElement("script");
+      script.src = TRACKING_SRC;
+      script.async = true;
+      script.type = "text/javascript";
+
+      function finalize() {
+        sessionStorage.setItem(TRACK_KEY, "1");
+        // In case widget artifacts are injected, remove them from our custom UI.
+        const widget = document.getElementById("mapmyvisitors-widget");
+        if (widget) widget.remove();
+        if (script.parentNode) script.parentNode.removeChild(script);
+      }
+
+      script.onload = finalize;
+      script.onerror = finalize;
+      document.head.appendChild(script);
     }
 
     function renderMap(items) {
@@ -368,27 +392,19 @@
     }
 
     function loadAndRender() {
-      const SESSION_DATA_KEY = "visitor_map_country_data_raw";
-      const cachedRaw = sessionStorage.getItem(SESSION_DATA_KEY);
-      const dataPromise = cachedRaw ? Promise.resolve(cachedRaw) : loadDataJsonp();
+      // Always fetch fresh data so numbers visibly update on each page load.
+      const dataPromise = loadDataJsonp();
 
       dataPromise
         .then(function (raw) {
-          if (!cachedRaw && raw) {
-            sessionStorage.setItem(SESSION_DATA_KEY, raw);
-          }
           if (periodEl) {
             periodEl.textContent = parseMonthRange(raw);
           }
           const items = parseCountryCounts(raw);
 
-          // If cached data parses empty, retry once with fresh data and refresh cache.
-          if (!items.length && cachedRaw) {
-            sessionStorage.removeItem(SESSION_DATA_KEY);
+          // Retry once if payload parses empty.
+          if (!items.length) {
             return loadDataJsonp().then(function (freshRaw) {
-              if (freshRaw) {
-                sessionStorage.setItem(SESSION_DATA_KEY, freshRaw);
-              }
               if (periodEl) {
                 periodEl.textContent = parseMonthRange(freshRaw);
               }
@@ -420,6 +436,7 @@
         });
     }
 
+      trackVisitOncePerSession();
     loadAndRender();
   })();
 </script>
