@@ -1,84 +1,425 @@
-<div
-  class="mapmyvisitors-embed"
-  style="
-    margin: 1.25rem 0 1.5rem;
-    display: flex;
-    justify-content: center;
-  "
->
-  <div
-    style="
-      width: 100%;
-      max-width: 560px;
-      margin: 0 auto;
-      padding: 0.9rem 1rem;
-      border-radius: 1rem;
-      border: 1px solid var(--global-divider-color);
-      background: var(--global-card-bg-color);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-    "
-  >
-    <div class="mapmyvisitors-measure" style="width: 100%; max-width: 520px; margin: 0 auto;">
-      <div class="mapmyvisitors-slot"></div>
-    </div>
+<div class="visitor-map-card">
+  <div class="visitor-map-head">
+    <h3 class="visitor-map-title">Map My Visitors</h3>
   </div>
+  <div class="visitor-map-meta" aria-label="visitor map summary">
+    <span class="visitor-map-badge">
+      <span class="visitor-map-badge-label">Countries</span>
+      <span id="visitor-map-country-total" class="visitor-map-badge-value">-</span>
+    </span>
+    <span class="visitor-map-badge">
+      <span class="visitor-map-badge-label">Visitors</span>
+      <span id="visitor-map-visit-total" class="visitor-map-badge-value">-</span>
+    </span>
+    <span class="visitor-map-badge">
+      <span class="visitor-map-badge-label">Period</span>
+      <span id="visitor-map-period" class="visitor-map-badge-value">-</span>
+    </span>
+  </div>
+  <div id="visitor-country-map" class="visitor-country-map" aria-label="World visitor map"></div>
 </div>
+
+<style>
+  .visitor-map-card {
+    margin: 1.25rem 0 1.5rem;
+    padding: 1rem;
+    border-radius: 1.1rem;
+    border: 1px solid var(--global-divider-color);
+    background:
+      radial-gradient(circle at 14% 14%, rgba(26, 133, 212, 0.24), transparent 45%),
+      radial-gradient(circle at 85% 5%, rgba(13, 90, 183, 0.18), transparent 34%),
+      linear-gradient(165deg, var(--global-card-bg-color), rgba(57, 121, 196, 0.12));
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.1);
+  }
+
+  .visitor-map-head {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .visitor-map-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .visitor-map-meta {
+    margin: 0 0 0.6rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .visitor-map-badge {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    padding: 0.28rem 0.58rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--global-card-bg-color) 72%, rgba(31, 125, 210, 0.12));
+    backdrop-filter: blur(2px);
+  }
+
+  .visitor-map-badge-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.8;
+  }
+
+  .visitor-map-badge-value {
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+
+  .visitor-country-map {
+    width: 100%;
+    min-height: 360px;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--global-divider-color) 80%, transparent);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  @media (max-width: 640px) {
+    .visitor-country-map {
+      min-height: 300px;
+    }
+  }
+</style>
 
 <script>
   (function () {
-    const DAY_SRC =
-      "https://mapmyvisitors.com/map.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&cl=ffffff&w=a&t=m";
-    const NIGHT_SRC =
-      "https://mapmyvisitors.com/map.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&cl=0e1633&w=a&t=m&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9";
+    const card = document.currentScript.previousElementSibling.previousElementSibling;
+    if (!card) return;
 
-    const embed = document.currentScript?.previousElementSibling;
-    if (!embed) return;
-    const slot = embed.querySelector(".mapmyvisitors-slot");
-    if (!slot) return;
+    const mapEl = card.querySelector("#visitor-country-map");
+    const countryTotalEl = card.querySelector("#visitor-map-country-total");
+    const visitTotalEl = card.querySelector("#visitor-map-visit-total");
+    const periodEl = card.querySelector("#visitor-map-period");
+    if (!mapEl) return;
+
+    const DATA_URL_BASE =
+      "https://mapmyvisitors.com/widget_call_home.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&w=520&t=m&cl=ffffff";
 
     function getTheme() {
-      const html = document.documentElement;
-      const t = html.getAttribute("data-theme");
+      const t = document.documentElement.getAttribute("data-theme");
       if (t === "dark" || t === "light") return t;
       return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
 
-    function cleanup() {
-      // Widget script refuses to re-embed if this exists.
-      const widget = document.getElementById("mapmyvisitors-widget");
-      if (widget) widget.remove();
-
-      // Remove any previous script tag we injected.
-      const prev = slot.querySelector("#mapmyvisitors");
-      if (prev) prev.remove();
-
-      // Clear any leftover nodes the script appended after itself.
-      slot.innerHTML = "";
+    function getCountryName(locationText) {
+      const trimmed = (locationText || "").trim();
+      if (!trimmed) return null;
+      if (trimmed.toLowerCase() === "unknown location") return null;
+      if (trimmed.includes(",")) {
+        return trimmed.split(",").pop().trim();
+      }
+      return trimmed;
     }
 
-    function render(theme) {
-      cleanup();
+    function parseCountryCounts(rawText) {
+      const counts = new Map();
+      const markerRegex = /(\d+)\s+visits?\s+from\s+([^"\n\r<>{}]+)/gi;
+      let match;
 
-      const s = document.createElement("script");
-      s.type = "text/javascript";
-      s.id = "mapmyvisitors";
-      s.src = theme === "dark" ? NIGHT_SRC : DAY_SRC;
-      slot.appendChild(s);
+      while ((match = markerRegex.exec(rawText)) !== null) {
+        const visits = parseInt(match[1], 10);
+        if (!Number.isFinite(visits)) continue;
+
+        const country = getCountryName(match[2]);
+        if (!country) continue;
+
+        counts.set(country, (counts.get(country) || 0) + visits);
+      }
+
+      return Array.from(counts.entries())
+        .map((entry) => ({ country: entry[0], count: entry[1] }))
+        .sort((a, b) => b.count - a.count);
     }
 
-    let lastTheme = null;
-    function ensure() {
+    function parseMonthRange(rawText) {
+      const dateMatch = rawText.match(/mapmyvisitors-date[^\n]*?html\('([^']+)'\)/i);
+      if (!dateMatch || !dateMatch[1]) return "-";
+
+      const months = [];
+      const monthRegex = /\b([A-Za-z]{3,9})\.?/g;
+      let m;
+
+      while ((m = monthRegex.exec(dateMatch[1])) !== null) {
+        const token = m[1];
+        if (/^(st|nd|rd|th)$/i.test(token)) continue;
+        months.push(token);
+      }
+
+      if (!months.length) return "-";
+      const first = months[0];
+      const last = months[months.length - 1];
+      return first === last ? first : first + " - " + last;
+    }
+
+    function ensurePlotly() {
+      if (window.Plotly) return Promise.resolve();
+      return new Promise(function (resolve, reject) {
+        const existing = document.querySelector('script[data-visitor-map-plotly="1"]');
+        if (existing) {
+          existing.addEventListener("load", resolve, { once: true });
+          existing.addEventListener("error", reject, { once: true });
+          return;
+        }
+
+        const s = document.createElement("script");
+        s.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+        s.async = true;
+        s.dataset.visitorMapPlotly = "1";
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+
+    function loadDataJsonp() {
+      return new Promise(function (resolve, reject) {
+        const callbackName = "visitorMapCb_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
+        const script = document.createElement("script");
+        script.src = DATA_URL_BASE + "&callback=" + callbackName;
+        script.async = true;
+
+        const timeoutId = window.setTimeout(function () {
+          cleanup();
+          reject(new Error("JSONP timeout"));
+        }, 8000);
+
+        function cleanup() {
+          window.clearTimeout(timeoutId);
+          if (script.parentNode) script.parentNode.removeChild(script);
+          try {
+            delete window[callbackName];
+          } catch (_e) {
+            window[callbackName] = undefined;
+          }
+        }
+
+        window[callbackName] = function (payload) {
+          cleanup();
+          resolve(String(payload || ""));
+        };
+
+        script.onerror = function () {
+          cleanup();
+          reject(new Error("JSONP load failed"));
+        };
+
+        document.head.appendChild(script);
+      });
+    }
+
+    function renderMap(items) {
+      if (!window.Plotly) return;
+
       const theme = getTheme();
-      if (theme === lastTheme) return;
-      lastTheme = theme;
-      render(theme);
+      const isDark = theme === "dark";
+      const textColor = isDark ? "#d6dee6" : "#1f2a37";
+      const lineColor = isDark ? "#5f7e9e" : "#9fb9d7";
+      const oceanColor = isDark ? "#081321" : "#dcecff";
+      const landBase = isDark ? "#1b3047" : "#ffffff";
+
+      // Build a categorical palette that stays close to the website's blue/teal
+      // visual language while keeping countries distinct at equal depth.
+      function buildCategoricalScale(size) {
+        if (size <= 1) return [[0, "hsl(210, 68%, 54%)"], [1, "hsl(210, 68%, 54%)"]];
+
+        const scale = [];
+        const paletteLight = [
+          "#2f80ed",
+          "#1f9bcf",
+          "#2d9cdb",
+          "#2f9e7f",
+          "#3f8fb6",
+          "#4d9de0",
+          "#2a6fba",
+          "#56a3a6",
+          "#3f88c5",
+          "#5a87c7",
+          "#3c9d90",
+          "#2e86ab"
+        ];
+        const paletteDark = [
+          "#64a8ff",
+          "#5dbfdf",
+          "#79b8ff",
+          "#5fc7b3",
+          "#6aaed6",
+          "#7aa2f7",
+          "#4f94d9",
+          "#72c9c6",
+          "#6db6f2",
+          "#8aa8f5",
+          "#6ccdb8",
+          "#63a8d3"
+        ];
+        const palette = isDark ? paletteDark : paletteLight;
+
+        for (let i = 0; i < size; i++) {
+          const t = i / (size - 1);
+          scale.push([t, palette[i % palette.length]]);
+        }
+
+        return scale;
+      }
+
+      const categoricalScale = buildCategoricalScale(items.length);
+
+      const totalVisits = items.reduce(function (sum, item) {
+        return sum + item.count;
+      }, 0);
+      if (countryTotalEl) {
+        countryTotalEl.textContent = String(items.length);
+      }
+      if (visitTotalEl) {
+        visitTotalEl.textContent = totalVisits.toLocaleString();
+      }
+
+      const trace = {
+        type: "choropleth",
+        locationmode: "country names",
+        locations: items.map(function (d) {
+          return d.country;
+        }),
+        z: items.map(function (_d, idx) {
+          return idx;
+        }),
+        customdata: items.map(function (d) {
+          return d.count;
+        }),
+        zmin: 0,
+        zmax: Math.max(items.length - 1, 1),
+        colorscale: categoricalScale,
+        marker: {
+          line: {
+            color: lineColor,
+            width: 0.9
+          }
+        },
+        showscale: false,
+        hoverlabel: {
+          bgcolor: isDark ? "#0a1625" : "#ffffff",
+          bordercolor: isDark ? "#4f6a85" : "#9ab7d7",
+          font: {
+            color: textColor,
+            size: 12
+          },
+          align: "left"
+        },
+        hovertemplate: "%{customdata} people from %{location}<extra></extra>"
+      };
+
+      const layout = {
+        margin: { t: 8, r: 8, b: 8, l: 8 },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        dragmode: false,
+        hovermode: "closest",
+        geo: {
+          fitbounds: false,
+          showframe: false,
+          showcoastlines: true,
+          coastlinecolor: lineColor,
+          coastlinewidth: 0.55,
+          showcountries: true,
+          countrycolor: lineColor,
+          showland: true,
+          landcolor: landBase,
+          showocean: true,
+          oceancolor: oceanColor,
+          showlakes: true,
+          lakecolor: oceanColor,
+          bgcolor: "rgba(0,0,0,0)",
+          projection: { type: "equirectangular", scale: 0.98 },
+          center: { lon: 0, lat: 12 },
+          lonaxis: { range: [-180, 180] },
+          lataxis: { range: [-58, 85] },
+          resolution: 50
+        },
+        font: { color: textColor }
+      };
+
+      const config = {
+        responsive: true,
+        displayModeBar: false,
+        scrollZoom: false,
+        doubleClick: false
+      };
+
+      window.Plotly.react(mapEl, [trace], layout, config);
     }
 
-    ensure();
+    function renderEmpty(message) {
+      mapEl.innerHTML = '<div class="visitor-map-subtitle" style="padding: 1rem;">' + message + "</div>";
+      if (countryTotalEl) countryTotalEl.textContent = "0";
+      if (visitTotalEl) visitTotalEl.textContent = "0";
+      if (periodEl) periodEl.textContent = "-";
+    }
 
-    // Re-render when the site's theme toggles.
-    const mo = new MutationObserver(ensure);
-    mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    function loadAndRender() {
+      const SESSION_DATA_KEY = "visitor_map_country_data_raw";
+      const cachedRaw = sessionStorage.getItem(SESSION_DATA_KEY);
+      const dataPromise = cachedRaw ? Promise.resolve(cachedRaw) : loadDataJsonp();
+
+      dataPromise
+        .then(function (raw) {
+          if (!cachedRaw && raw) {
+            sessionStorage.setItem(SESSION_DATA_KEY, raw);
+          }
+          if (periodEl) {
+            periodEl.textContent = parseMonthRange(raw);
+          }
+          const items = parseCountryCounts(raw);
+
+          // If cached data parses empty, retry once with fresh data and refresh cache.
+          if (!items.length && cachedRaw) {
+            sessionStorage.removeItem(SESSION_DATA_KEY);
+            return loadDataJsonp().then(function (freshRaw) {
+              if (freshRaw) {
+                sessionStorage.setItem(SESSION_DATA_KEY, freshRaw);
+              }
+              if (periodEl) {
+                periodEl.textContent = parseMonthRange(freshRaw);
+              }
+              return parseCountryCounts(freshRaw);
+            });
+          }
+
+          return items;
+        })
+        .then(function (items) {
+          if (!items || !items.length) {
+            renderEmpty("No country visit data is available yet.");
+            return;
+          }
+          return ensurePlotly().then(function () {
+            renderMap(items);
+            return items;
+          });
+        })
+        .then(function (items) {
+          if (!items) return;
+          const themeObserver = new MutationObserver(function () {
+            renderMap(items);
+          });
+          themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+        })
+        .catch(function () {
+          renderEmpty("Visitor map is temporarily unavailable.");
+        });
+    }
+
+    loadAndRender();
   })();
 </script>

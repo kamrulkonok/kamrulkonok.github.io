@@ -1,0 +1,271 @@
+<section class="activity-map-wrap">
+  <div class="activity-map-header">
+    <h2>Activity Map</h2>
+    <p>Study, travel, hiking, and cycling journey with photos and notes.</p>
+  </div>
+
+  <div id="activity-map" aria-label="Interactive personal activity map"></div>
+
+  <div class="activity-map-legend">
+    <span class="chip chip-study">Study</span>
+    <span class="chip chip-travel">Travel</span>
+    <span class="chip chip-hiking">Hiking</span>
+    <span class="chip chip-cycling">Cycling</span>
+    <span class="chip chip-track">Track</span>
+  </div>
+</section>
+
+<style>
+  .activity-map-wrap {
+    margin: 1.4rem 0 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-card-bg-color);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .activity-map-header h2 {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+
+  .activity-map-header p {
+    margin: 0.35rem 0 0.9rem;
+    opacity: 0.85;
+    font-size: 0.92rem;
+  }
+
+  #activity-map {
+    width: 100%;
+    height: 480px;
+    min-height: 420px;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    border: 1px solid var(--global-divider-color);
+    background: #eef2f7;
+  }
+
+  #activity-map.leaflet-container {
+    width: 100%;
+    height: 480px;
+  }
+
+  .activity-map-legend {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+  }
+
+  .activity-map-legend .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.22rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .chip-study {
+    background: #2f80ed;
+  }
+
+  .chip-travel {
+    background: #e68a00;
+  }
+
+  .chip-hiking {
+    background: #2f9e44;
+  }
+
+  .chip-cycling {
+    background: #9c36b5;
+  }
+
+  .chip-track {
+    background: #495057;
+  }
+
+  .activity-popup {
+    min-width: 220px;
+    max-width: 290px;
+  }
+
+  .activity-popup h4 {
+    margin: 0 0 0.25rem;
+    font-size: 0.95rem;
+  }
+
+  .activity-popup .meta {
+    margin-bottom: 0.35rem;
+    font-size: 0.78rem;
+    opacity: 0.78;
+  }
+
+  .activity-popup p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .activity-popup img {
+    margin-top: 0.5rem;
+    width: 100%;
+    max-height: 140px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid #e9ecef;
+  }
+
+  @media (max-width: 640px) {
+    #activity-map {
+      height: 380px;
+      min-height: 340px;
+    }
+
+    #activity-map.leaflet-container {
+      height: 380px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const places = {{ site.data.map.places | jsonify }};
+    const tracks = {{ site.data.map.tracks | jsonify }};
+
+    const categoryStyle = {
+      study: { color: "#2f80ed", fillColor: "#74a9ff", radius: 8 },
+      travel: { color: "#e68a00", fillColor: "#ffbe5a", radius: 7 },
+      hiking: { color: "#2f9e44", fillColor: "#7fd694", radius: 7 },
+      cycling: { color: "#9c36b5", fillColor: "#c97adb", radius: 7 }
+    };
+
+    function esc(v) {
+      return String(v || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function markerPopup(place) {
+      const photo = place.photo
+        ? `<img src="${esc(place.photo)}" alt="${esc(place.title)} photo" loading="lazy">`
+        : "";
+      const category = esc(place.category || "activity");
+      const period = esc(place.period || place.date || "");
+      const meta = period ? `${category} • ${period}` : category;
+      return `<div class="activity-popup"><h4>${esc(place.title)}</h4><div class="meta">${meta}</div><p>${esc(
+        place.description
+      )}</p>${photo}</div>`;
+    }
+
+    function trackPopup(track) {
+      const category = esc(track.category || "track");
+      const distance = esc(track.distance_km ? `${track.distance_km} km` : "");
+      const meta = distance ? `${category} • ${distance}` : category;
+      return `<div class="activity-popup"><h4>${esc(track.title)}</h4><div class="meta">${meta}</div><p>${esc(
+        track.description
+      )}</p></div>`;
+    }
+
+    function whenLeafletReady(callback, retries) {
+      if (window.L) {
+        callback();
+        return;
+      }
+      if (retries <= 0) return;
+      window.setTimeout(() => whenLeafletReady(callback, retries - 1), 100);
+    }
+
+    function initMap() {
+      const mapEl = document.getElementById("activity-map");
+      if (!mapEl || mapEl.dataset.ready === "1") return;
+      mapEl.dataset.ready = "1";
+
+      const map = L.map(mapEl, {
+        zoomControl: true,
+        scrollWheelZoom: false
+      }).setView([30, 10], 2);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      const layers = {
+        Study: L.layerGroup().addTo(map),
+        Travel: L.layerGroup().addTo(map),
+        Hiking: L.layerGroup().addTo(map),
+        Cycling: L.layerGroup().addTo(map),
+        Tracks: L.layerGroup().addTo(map)
+      };
+
+      const keyMap = {
+        study: "Study",
+        travel: "Travel",
+        hiking: "Hiking",
+        cycling: "Cycling"
+      };
+
+      const bounds = L.latLngBounds([]);
+
+      places.forEach((place) => {
+        if (!Array.isArray(place.coordinates) || place.coordinates.length !== 2) return;
+        const lat = place.coordinates[0];
+        const lng = place.coordinates[1];
+        const category = String(place.category || "travel").toLowerCase();
+        const style = categoryStyle[category] || categoryStyle.travel;
+
+        const marker = L.circleMarker([lat, lng], {
+          color: style.color,
+          fillColor: style.fillColor,
+          fillOpacity: 0.92,
+          radius: style.radius,
+          weight: 2
+        }).bindPopup(markerPopup(place));
+
+        const layerName = keyMap[category] || "Travel";
+        marker.addTo(layers[layerName]);
+        bounds.extend([lat, lng]);
+      });
+
+      tracks.forEach((track) => {
+        if (!Array.isArray(track.coordinates) || track.coordinates.length < 2) return;
+        const category = String(track.category || "track").toLowerCase();
+        const style = categoryStyle[category] || { color: "#495057" };
+        const line = L.polyline(track.coordinates, {
+          color: style.color,
+          weight: 3.5,
+          opacity: 0.85,
+          dashArray: category === "travel" ? "8 6" : null
+        }).bindPopup(trackPopup(track));
+
+        line.addTo(layers.Tracks);
+        line.getLatLngs().forEach((latlng) => bounds.extend(latlng));
+      });
+
+      L.control.layers(null, layers, { collapsed: false, position: "topright" }).addTo(map);
+
+      if (bounds.isValid()) {
+        map.fitBounds(bounds.pad(0.15));
+      }
+
+      // Leaflet can render at an incorrect size when initialized in dynamic layouts.
+      // Invalidate after paint and on resize to keep the map fully visible.
+      window.setTimeout(() => map.invalidateSize(true), 0);
+      window.setTimeout(() => map.invalidateSize(true), 220);
+      window.addEventListener("resize", () => map.invalidateSize(true));
+    }
+
+    whenLeafletReady(initMap, 120);
+  })();
+</script>

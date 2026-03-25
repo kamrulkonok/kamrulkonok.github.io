@@ -66,6 +66,13 @@
                     <span class="sr-only">LinkedIn</span>
                   </a>
                 </li>
+              {% when 'orcid_id' %}
+                <li class="nav-item">
+                  <a class="nav-link social-icon" href="https://orcid.org/{{ social[1] }}" title="ORCID" target="_blank" rel="noopener noreferrer">
+                    <i class="ai ai-orcid"></i>
+                    <span class="sr-only">ORCID</span>
+                  </a>
+                </li>
               {% when 'kaggle_id' %}
                 <li class="nav-item">
                   <a class="nav-link social-icon" href="https://www.kaggle.com/{{ social[1] }}" title="Kaggle" target="_blank" rel="noopener noreferrer">
