@@ -16,12 +16,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "",
+        },{id: "nav-adventure",
+          title: "adventure",
+          description: "University, work, travel, and hiking highlights on the map.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/adventure/";
           },
         },{id: "post-a-post-with-plotly-js",
         
