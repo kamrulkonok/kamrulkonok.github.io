@@ -457,6 +457,13 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/kamrulkonok", "_blank");
         },
       },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0009-0000-8052-491X", "_blank");
+        },
+      },{
         id: 'social-kaggle',
         title: 'Kaggle',
         section: 'Socials',
