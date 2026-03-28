@@ -436,12 +436,12 @@ ninja.data = [{
           title: 'Unsupervised Chest X-ray Clustering with Group Equivariant Convolutions',
           description: "Group-equivariant deep clustering for chest X-rays with faster convergence and clearer clusters, without data augmentation.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/15_bdrp_geometric_deep_learning/";
+              window.location.href = "/research-work/15_bdrp_geometric_deep_learning/";
             },},{id: "projects-brain-tumor-detection-and-classification-using-convolutional-neural-networks",
           title: 'Brain Tumor Detection and Classification Using Convolutional Neural Networks',
           description: "Undergraduate thesis on CNN-based brain tumor classification, comparing VGG-16, Xception, ResNet-50, and Inception-V3 on MRI data.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/16_brain_tumor_cnn/";
+              window.location.href = "/research-work/16_brain_tumor_cnn/";
             },},{
         id: 'social-email',
         title: 'email',
