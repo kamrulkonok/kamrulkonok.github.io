@@ -27,6 +27,10 @@ The project features multiple interactive visualizations built with **D3.js**:
 - **Choropleth Map**: Visualizes STEM jobs forecasted by CEDEFOP from 2025 to 2035 across EU countries
 - **Country-Specific Bar Charts**: Normalized visualizations showing forecasted STEM jobs per sector for Finland, France, Luxembourg, and Switzerland
 
+> **Live Interactive Demo**  
+> Explore the full interactive dashboard and D3.js visualizations here:  
+> <a href="https://kamrulkonok.github.io/VisualAnalyticsProject/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Visual Analytics Project</a>
+
 ## Dataset
 
 Utilizes publicly available data from [Stack Overflow's Developer Survey](https://survey.stackoverflow.co/), enriched with forecasts from the CEDEFOP European Agency. The dataset was processed and cleaned using Python and Pandas.
