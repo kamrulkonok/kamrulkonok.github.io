@@ -31,6 +31,10 @@ d-article {
   table {
     color: var(--global-text-color) !important;
   }
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
   h1,
   h2,
   hr,
