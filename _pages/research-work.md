@@ -9,8 +9,8 @@ horizontal: false
 ---
 
 <div class="projects">
-  {% assign sorted_projects = site.projects | where_exp: "p", "p.published != false" | sort: "importance" %}
-  {% assign research_projects = sorted_projects | where: "research", true %}
+  {% assign visible_projects = site.projects | where_exp: "p", "p.published != false" %}
+  {% assign research_projects = visible_projects | where: "research", true | sort: "time_order" | reverse %}
 
   {% if research_projects.size > 0 %}
     <h2 class="category category-bar mb-3 mt-0">Research Work</h2>

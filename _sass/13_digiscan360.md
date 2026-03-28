@@ -14,7 +14,7 @@ technologies: PySpark, LLMs, Microsoft Fabric, Azure Data Factory, Power BI, Gra
 
 [Md Kamrul Islam](https://github.com/kamrulkonok), [Hareem Raza](https://github.com/hareemraza), [Muhammad Qasim Khan](https://github.com/QasimKhan5x), and [Narmina Mahmudova](https://github.com/nmahmudova)
 
-<!-- <nav class="research-nav mb-3 py-3" aria-label="Page sections">
+<nav class="research-nav mb-3 py-3" aria-label="Page sections">
   <div class="d-flex flex-wrap justify-content-center gap-2 gap-md-3">
     <a href="#overview">Overview</a>
     <a href="#system-architecture">Architecture</a>
@@ -23,7 +23,7 @@ technologies: PySpark, LLMs, Microsoft Fabric, Azure Data Factory, Power BI, Gra
     <a href="#semantic-and-graph-based-modeling">Semantics</a>
     <a href="#analytical-exploitation-and-results">Analytics</a>
   </div>
-</nav> -->
+</nav>
 
 ## Overview
 

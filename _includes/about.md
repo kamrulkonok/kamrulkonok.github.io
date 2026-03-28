@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Prospective PhD student (Fall 2026) interested in Foundation Models, Natural Language Processing, and Deep Learning
+subtitle: Prospective PhD applicant (Fall 2026) in foundation models, retrieval-augmented generation, and multimodal learning
 
 profile:
   align: right
@@ -35,7 +35,9 @@ latest_posts:
 
 My academic and research experiences reflect this exploration:
 
-- **Master's thesis (LLMs + security requirements extraction):** Worked on a hybrid framework combining LLM-based generation with rule-based validation for cybersecurity annotations in business process models, improving annotation quality while significantly reducing manual effort.
+- **Master's thesis (LLMs + security requirements extraction):** Developed a hybrid LLM + rule-based framework for security annotations in business process models, improving quality while reducing manual effort.  
+  **Submission update:** Submitted to the **24th International Conference on Business Process Management (BPM 2026)** and currently under review.  
+  **Availability:** Preprint, code, and dataset are temporarily private to preserve anonymous review.
 - **Graduate research (medical imaging):** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs to improve representation learning and cluster separability while reducing reliance on data augmentation and large labeled datasets. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/projects/15_bdrp_geometric_deep_learning/' | relative_url }}).
 - **Undergraduate thesis (deep learning in healthcare):** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [Brain Tumor Detection and Classification Using Convolutional Neural Networks]({{ '/projects/16_brain_tumor_cnn/' | relative_url }}).
 
@@ -52,7 +54,7 @@ I am broadly interested in:
 - Foundation models and LLMs
 - Retrieval-augmented systems (RAG)
 - Information extraction
-- Continual learning
+- Multimodal learning
 - Frugal AI
 - AI in healthcare
 - Deep Learning
