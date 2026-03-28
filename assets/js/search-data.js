@@ -422,8 +422,8 @@ ninja.data = [{
           description: "Created a custom PostgreSQL extension for storing and analyzing chess games, introducing chess-specific data types, functions, and indices for efficient querying.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/12_postgresql_chess_extension/";
-            },},{id: "projects-digiscan360-end-to-end-data-amp-semantic-intelligence-for-competitive-analysis",
-          title: 'DigiScan360 — End-to-End Data &amp;amp; Semantic Intelligence for Competitive Analysis',
+            },},{id: "projects-digiscan360-end-to-end-data-analysis-for-competitive-intelligence",
+          title: 'DigiScan360: End-to-End Data Analysis for Competitive Intelligence',
           description: "An end-to-end data and semantic intelligence system for scalable competitive analysis across heterogeneous market data.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/13_digiscan360/";
@@ -442,6 +442,11 @@ ninja.data = [{
           description: "Undergraduate thesis on CNN-based brain tumor classification, comparing VGG-16, Xception, ResNet-50, and Inception-V3 on MRI data.",
           section: "Projects",handler: () => {
               window.location.href = "/research-work/16_brain_tumor_cnn/";
+            },},{id: "projects-applying-knowledge-graphs-in-retrieval-augmented-generation-rag",
+          title: 'Applying Knowledge Graphs in Retrieval-Augmented Generation (RAG)',
+          description: "Presented at the Twelfth European Big Data Management &amp; Analytics Summer School (eBISS 2024), University of Padova, Italy (July 2024); this work reviews KG-RAG architectures, applications, and open challenges.",
+          section: "Projects",handler: () => {
+              window.location.href = "/research-work/17_rag_for_knowledge_graphs/";
             },},{
         id: 'social-email',
         title: 'email',
