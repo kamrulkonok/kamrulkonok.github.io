@@ -4,7 +4,7 @@ permalink: /adventure/
 title: adventure
 description: University, work, travel, and hiking highlights on the map.
 nav: true
-nav_order: 4
+nav_order: 5
 ---
 
 ## Adventure Map

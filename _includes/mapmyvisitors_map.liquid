@@ -190,7 +190,7 @@
       return new Promise(function (resolve, reject) {
         const callbackName = "visitorMapCb_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
         const script = document.createElement("script");
-        script.src = DATA_URL_BASE + "&callback=" + callbackName;
+        script.src = DATA_URL_BASE + "&callback=" + callbackName + "&_=" + Date.now();
         script.async = true;
 
         const timeoutId = window.setTimeout(function () {
@@ -222,26 +222,45 @@
       });
     }
 
+    function safeSessionGet(key) {
+      try {
+        return sessionStorage.getItem(key);
+      } catch (_e) {
+        return null;
+      }
+    }
+
+    function safeSessionSet(key, value) {
+      try {
+        sessionStorage.setItem(key, value);
+      } catch (_e) {
+        // Ignore storage failures in privacy-restricted contexts.
+      }
+    }
+
     function trackVisitOncePerSession() {
       const TRACK_KEY = "visitor_map_visit_tracked";
-      if (sessionStorage.getItem(TRACK_KEY) === "1") return;
+      if (safeSessionGet(TRACK_KEY) === "1") return Promise.resolve(false);
 
-      const script = document.createElement("script");
-      script.src = TRACKING_SRC;
-      script.async = true;
-      script.type = "text/javascript";
+      return new Promise(function (resolve) {
+        const script = document.createElement("script");
+        script.src = TRACKING_SRC + "&_=" + Date.now();
+        script.async = true;
+        script.type = "text/javascript";
 
-      function finalize() {
-        sessionStorage.setItem(TRACK_KEY, "1");
-        // In case widget artifacts are injected, remove them from our custom UI.
-        const widget = document.getElementById("mapmyvisitors-widget");
-        if (widget) widget.remove();
-        if (script.parentNode) script.parentNode.removeChild(script);
-      }
+        function finalize() {
+          safeSessionSet(TRACK_KEY, "1");
+          // In case widget artifacts are injected, remove them from our custom UI.
+          const widget = document.getElementById("mapmyvisitors-widget");
+          if (widget) widget.remove();
+          if (script.parentNode) script.parentNode.removeChild(script);
+          resolve(true);
+        }
 
-      script.onload = finalize;
-      script.onerror = finalize;
-      document.head.appendChild(script);
+        script.onload = finalize;
+        script.onerror = finalize;
+        document.head.appendChild(script);
+      });
     }
 
     function renderMap(items) {
@@ -395,7 +414,7 @@
       // Always fetch fresh data so numbers visibly update on each page load.
       const dataPromise = loadDataJsonp();
 
-      dataPromise
+      return dataPromise
         .then(function (raw) {
           if (periodEl) {
             periodEl.textContent = parseMonthRange(raw);
@@ -436,7 +455,17 @@
         });
     }
 
-      trackVisitOncePerSession();
-    loadAndRender();
+    trackVisitOncePerSession()
+      .then(function (trackedNow) {
+        return loadAndRender().then(function () {
+          // Fetch once more shortly after first-time track so updated totals are reflected.
+          if (trackedNow) {
+            window.setTimeout(loadAndRender, 1500);
+          }
+        });
+      })
+      .catch(function () {
+        loadAndRender();
+      });
   })();
 </script>

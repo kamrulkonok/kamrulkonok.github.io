@@ -36,10 +36,10 @@ layout: default
         <a href="#future-work">Limitations</a>
       </div>
     </nav>
-    {% if page.paper_url or page.code_url or page.report_pdf_url or page.slides_url or page.poster_url or page.dataset_url %}
+    {% if page.preprint_url or page.paper_url or page.code_url or page.report_pdf_url or page.slides_url or page.poster_url or page.dataset_url %}
       <div class="project-research-links d-flex justify-content-center flex-wrap gap-3 mb-2">
-        {% if page.paper_url %}
-          <a href="{{ page.paper_url }}" target="_blank" rel="noopener noreferrer" class="project-research-link-icon"><i class="si si-zenodo" aria-hidden="true"></i><span>Paper</span></a>
+        {% if page.preprint_url or page.paper_url %}
+          <a href="{{ page.preprint_url | default: page.paper_url }}" target="_blank" rel="noopener noreferrer" class="project-research-link-icon"><i class="si si-zenodo" aria-hidden="true"></i><span>Preprint</span></a>
         {% endif %}
         {% if page.code_url %}
           <a href="{{ page.code_url }}" target="_blank" rel="noopener noreferrer" class="project-research-link-icon"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Code</span></a>

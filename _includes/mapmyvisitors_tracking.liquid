@@ -1,0 +1,41 @@
+<script>
+  (function () {
+    const TRACK_KEY = "visitor_map_visit_tracked";
+    const TRACKING_SRC =
+      "https://mapmyvisitors.com/map.js?d=XICOOJzK6XIgLX2kz4L5Bkn1GgZK2XYqmL_RijOoofA&cl=ffffff&w=a&t=m";
+
+    function safeSessionGet(key) {
+      try {
+        return sessionStorage.getItem(key);
+      } catch (_e) {
+        return null;
+      }
+    }
+
+    function safeSessionSet(key, value) {
+      try {
+        sessionStorage.setItem(key, value);
+      } catch (_e) {
+        // Ignore storage failures in privacy-restricted contexts.
+      }
+    }
+
+    if (safeSessionGet(TRACK_KEY) === "1") return;
+
+    const script = document.createElement("script");
+    script.src = TRACKING_SRC + "&_=" + Date.now();
+    script.async = true;
+    script.type = "text/javascript";
+
+    function finalize() {
+      safeSessionSet(TRACK_KEY, "1");
+      const widget = document.getElementById("mapmyvisitors-widget");
+      if (widget) widget.remove();
+      if (script.parentNode) script.parentNode.removeChild(script);
+    }
+
+    script.onload = finalize;
+    script.onerror = finalize;
+    document.head.appendChild(script);
+  })();
+</script>

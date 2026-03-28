@@ -7,8 +7,9 @@ subtitle: Prospective PhD student interested in Foundation Models, Natural Langu
 profile:
   align: right
   image: prof_pic.png
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
+    <p>+88 018 64 208599</p>
     <p>Dhaka, Bangladesh</p>
     <p><a href="mailto:mdkamrul.islam@student-cs.fr">mdkamrul.islam@student-cs.fr</a></p>
     <p><a href="mailto:mdkamrul.islam@hotmail.com">mdkamrul.islam@hotmail.com</a></p>
@@ -25,13 +26,10 @@ latest_posts:
   enabled: false
 ---
 
-## About Me
+## Education
 
-I hold an **Erasmus Mundus Joint Master's degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/)**, completed across CentraleSupélec, Universitat Politecnica de Catalunya, and Universite Libre de Bruxelles. During my master's thesis, supervised by [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr), and [Prof. Sami Souihi](https://scholar.google.com/citations?hl=fr&user=7Lkpc80AAAAJ&view_op=list_works&sortby=pubdate), I worked on large language models for cybersecurity-related tasks. I previously earned a **Bachelor's of Engineering degree in Software Engineering** from [Sichuan University, China](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm) with distinction, where my undergraduate thesis, supervised by [Prof. Jie Chen](https://www.jiechen.site/), focused on deep learning for medical imaging. When I’m not reading papers or running experiments, I enjoy practicing new languages or playing tennis.
-
-<blockquote class="collab-note">
-  <p><strong>Have a project in mind or want to collaborate? Feel free to contact me.</strong></p>
-</blockquote>
+- Erasmus Mundus Joint Master’s Degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/), completed across CentraleSupélec, Universitat Politècnica de Catalunya (BarcelonaTech), and Université Libre de Bruxelles (Brussels); funded by a highly competitive Erasmus Mundus scholarship (24 awards out of ~1,000 applicants).
+- Bachelor of Engineering in Software Engineering at [Sichuan University, China](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm); graduated with distinction and received the fully funded Belt and Road Initiative Scholarship throughout my studies in recognition of consistent outstanding academic performance. When I’m not reading papers or running experiments, I enjoy practicing new languages or playing tennis.
 
 ## Research Highlights
 
@@ -51,22 +49,13 @@ My academic and research experiences reflect this exploration:
 
 I am broadly interested in:
 
-<div class="row g-3">
-  <div class="col-md-6">
-    <ul>
-      <li>Foundation models and LLMs</li>
-      <li>Information extraction</li>
-      <li>Continual learning</li>
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <ul>
-      <li>Frugal AI</li>
-      <li>AI in healthcare</li>
-      <li>Deep Learning</li>
-    </ul>
-  </div>
-</div>
+- Foundation models and LLMs
+- Retrieval-augmented systems (RAG)
+- Information extraction
+- Continual learning
+- Frugal AI
+- AI in healthcare
+- Deep Learning
 
 <!-- ## Hobbies
 

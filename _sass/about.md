@@ -27,10 +27,10 @@ latest_posts:
 
 ## About Me
 
-I hold an **Erasmus Mundus Joint Master's degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/)**, completed across CentraleSupélec, Universitat Politecnica de Catalunya, and Universite Libre de Bruxelles. During my master's thesis, supervised by [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr), and [Prof. Sami Souihi](https://scholar.google.com/citations?hl=fr&user=7Lkpc80AAAAJ&view_op=list_works&sortby=pubdate), I worked on large language models for cybersecurity-related tasks. I previously earned a **Bachelor's of Engineering degree in Software Engineering** from [Sichuan University, China](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm) with distinction, where my undergraduate thesis, supervised by [Prof. Jie Chen](https://www.jiechen.site/), focused on deep learning for medical imaging. When I’m not reading papers or running experiments, I enjoy practicing new languages or playing tennis.
+I hold an **Erasmus Mundus Joint Master's degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/)**, completed across CentraleSupélec, Universitat Politecnica de Catalunya, and Universite Libre de Bruxelles. During my master's thesis, supervised by [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr), and [Prof. Sami Souihi](https://scholar.google.com/citations?hl=fr&user=7Lkpc80AAAAJ&view_op=list_works&sortby=pubdate), I worked on large language models for cybersecurity-related tasks. I previously earned a **Bachelor of Engineering degree in Software Engineering** from [Sichuan University, China](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm) with distinction, where my undergraduate thesis, supervised by [Prof. Jie Chen](https://www.jiechen.site/), focused on deep learning for medical imaging. When I’m not reading papers or running experiments, I enjoy practicing new languages or playing tennis.
 
 <blockquote class="collab-note">
-  <p><strong>Have a project in mind or want to collaborate? Feel free to contact me.</strong></p>
+  <strong>Have a project in mind or want to collaborate? Feel free to contact me.</strong>
 </blockquote>
 
 ## Research Highlights
