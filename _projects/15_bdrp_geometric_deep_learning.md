@@ -6,6 +6,7 @@ img: assets/img/publication_preview/bdrp/gcnn_clustering_architecture.jpg
 year: 2024
 semester: Fall 2024
 research: true
+permalink: /research-work/15_bdrp_geometric_deep_learning/
 authors_list:
   - name: Md Kamrul Islam
     url: https://kamrulkonok.github.io/

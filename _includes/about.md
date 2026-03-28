@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Prospective PhD student interested in Foundation Models, Natural Language Processing, and Deep Learning
+subtitle: Prospective PhD student (Fall 2026) interested in Foundation Models, Natural Language Processing, and Deep Learning
 
 profile:
   align: right

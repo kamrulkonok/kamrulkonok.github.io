@@ -9,6 +9,7 @@ teaser_caption: "Brain tumor detection and classification from MRI."
 year: 2021
 semester: Fall 2021
 research: true
+permalink: /research-work/16_brain_tumor_cnn/
 importance: 1
 authors_list:
   - name: Md Kamrul Islam

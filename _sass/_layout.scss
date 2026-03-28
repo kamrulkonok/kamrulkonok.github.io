@@ -55,6 +55,9 @@ body.sticky-bottom-footer {
 
 // Profile
 .profile {
+  position: relative;
+  z-index: 2;
+
   figure {
     margin: 0;
     padding: 0;
@@ -321,12 +324,16 @@ body.sticky-bottom-footer {
   }
 
   .project-research-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
     margin-bottom: 1rem;
 
     .project-research-link-icon {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
       padding: 0.5rem 1rem;
       color: var(--global-text-color);
@@ -344,14 +351,6 @@ body.sticky-bottom-footer {
         font-size: 1.15rem;
       }
 
-      .si {
-        transform: translate(50%, -50%) scale(1);
-      }
-
-        transform: translate(50%, -50%) scale(1.08);
-        font-weight: 500;
-      }
-        transform: translate(50%, -50%) scale(1);
       &:hover {
         color: var(--global-theme-color);
         border-color: var(--global-theme-color);
@@ -441,13 +440,16 @@ article {
       margin-bottom: 1rem;
     }
 
-    .collab-note {
-      width: min(100%, 34rem);
-      margin: 0.65rem 0 1.1rem;
-      padding: 0.72rem 0.95rem 0.72rem 1.55rem;
+    blockquote.collab-note {
+      clear: both;
+      display: inline-block;
+      max-width: 18rem;
+      margin: 0.65rem 0 1.1rem 0;
+      padding: 0.6rem 0.85rem 0.6rem 1.4rem;
       border-left: 3px solid var(--global-theme-color);
       border-radius: 0.5rem;
-      background: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-card-bg-color));
+      background: color-mix(in srgb, var(--global-card-bg-color) 96%, var(--global-theme-color) 4%);
+      box-shadow: none;
 
       &::before {
         top: 0.18rem;
@@ -675,3 +677,4 @@ article {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+}
