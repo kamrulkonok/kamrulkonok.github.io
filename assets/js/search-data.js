@@ -407,6 +407,12 @@ ninja.data = [{
           section: "News",},{id: "news-completed-my-erasmus-mundus-joint-master-s-degree-in-big-data-management-and-analytics",
           title: 'Completed my Erasmus Mundus Joint Master’s degree in Big Data Management and Analytics...',
           description: "",
+          section: "News",},{id: "news-joined-american-international-university-bangladesh-aiub-as-a-lecturer-in-the-department-of-computer-science-see-my-faculty-profile",
+          title: 'Joined American International University-Bangladesh (AIUB) as a Lecturer in the Department of Computer...',
+          description: "",
+          section: "News",},{id: "news-paper-accepted-at-the-24th-international-conference-on-business-process-management-bpm-2026-bpm-forum-edition-a-hybrid-llm-based-framework-for-automated-security-annotations-generation-in-business-process-models",
+          title: 'Paper accepted at the 24th International Conference on Business Process Management (BPM 2026)...',
+          description: "",
           section: "News",},{id: "projects-anomaly-detection-in-diesel-train-cooling-systems",
           title: 'Anomaly Detection in Diesel Train Cooling Systems',
           description: "Developed unsupervised models to detect anomalies in train cooling systems for the Belgian National Railway Company (SNCB), helping prevent train delays and reduce maintenance costs.",
@@ -447,6 +453,11 @@ ninja.data = [{
           description: "Presented at the Twelfth European Big Data Management &amp; Analytics Summer School (eBISS 2024), University of Padova, Italy (July 2024); this work reviews KG-RAG architectures, applications, and open challenges.",
           section: "Projects",handler: () => {
               window.location.href = "/research-work/17_rag_for_knowledge_graphs/";
+            },},{id: "projects-a-hybrid-llm-based-framework-for-automated-security-annotation-generation-in-business-process-models",
+          title: 'A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models...',
+          description: "Hybrid LLM + rule-based framework for generating SecBPMN2 security annotations from BPMN models and natural-language requirements, with higher precision and substantially faster annotation than manual expert labeling.",
+          section: "Projects",handler: () => {
+              window.location.href = "/research-work/18_secbpmn_llm_security_annotations/";
             },},{
         id: 'social-email',
         title: 'email',
