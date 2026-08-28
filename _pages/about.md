@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Prospective PhD applicant (Fall 2026) in foundation models, retrieval-augmented generation, and multimodal learning
+subtitle: Prospective PhD Applicant | Lecturer at AIUB | Erasmus Mundus Scholar
 
 profile:
   align: right
@@ -28,10 +28,10 @@ latest_posts:
 I am an AI Research Engineer with two years of experience across research and industry, specializing in large language models, information extraction, deep learning, and medical imaging. I hold an **Erasmus Mundus Joint Master's degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/)**, completed across CentraleSupélec, Universitat Politecnica de Catalunya, and Universite Libre de Bruxelles. During my master's thesis, supervised by [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr), and [Prof. Sami Souihi](https://scholar.google.com/citations?hl=fr&user=7Lkpc80AAAAJ&view_op=list_works&sortby=pubdate), I worked on large language models for cybersecurity-related tasks. I previously earned a **Bachelor's of Engineering degree in Software Engineering** from [Sichuan University, China](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm) with distinction, where my undergraduate thesis, supervised by [Prof. Jie Chen](https://www.jiechen.site/), focused on deep learning for medical imaging.  When I’m not reading papers or running experiments, I enjoy practicing new languages or playing tennis.
 
 <blockquote class="collab-note">
-  <p><strong>Interested in collaborating on a publication or exchanging research ideas? I would be glad to connect.</strong></p>
+  <p><strong>Always happy to connect, exchange ideas, and explore potential collaborations.</strong></p>
   <p>
     <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-    <a href="mailto:mdkamrul.islam@student-cs.fr">mdkamrul.islam@student-cs.fr</a>
+    <a href="mailto:mdkamrul.islam@aiub.edu">mdkamrul.islam@aiub.edu</a>
     /
     <a href="mailto:mdkamrul.islam@hotmail.com">mdkamrul.islam@hotmail.com</a>
   </p>
@@ -41,11 +41,9 @@ I am an AI Research Engineer with two years of experience across research and in
 
 My academic and research experiences reflect this exploration:
 
-- **Master's thesis (LLMs + security requirements extraction):** Developed a hybrid LLM + rule-based framework for security annotations in business process models, improving quality while reducing manual effort.  
-  **Submission update:** Submitted to the **24th International Conference on Business Process Management (BPM 2026)** and currently under review.  
-  **Availability:** Preprint, code, and dataset are temporarily private to preserve anonymous review.
-- **Graduate research (medical imaging):** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs to improve representation learning and cluster separability while reducing reliance on data augmentation. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
-- **Undergraduate thesis (deep learning in healthcare):** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [Brain Tumor Detection and Classification Using Convolutional Neural Networks]({{ '/research-work/16_brain_tumor_cnn/' | relative_url }}).
+- **Master's Thesis:** Developed a hybrid LLM + rule-based framework for automated security annotations in business process models. *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models* (Islam et al.) accepted at the [24th International Conference on Business Process Management (BPM 2026)](https://www.yorku.ca/events/bpm2026/program/forum/#forum3) [BPM Forum edition]. [Preprint](https://arxiv.org/abs/2608.14370).
+- **Graduate Research:** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs to improve representation learning and cluster separability while reducing reliance on data augmentation. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
+- **Undergraduate Thesis:** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [Brain Tumor Detection and Classification Using Convolutional Neural Networks]({{ '/research-work/16_brain_tumor_cnn/' | relative_url }}).
 
 ## Expertise
 
@@ -53,27 +51,6 @@ My academic and research experiences reflect this exploration:
 - **Data & Systems:** Big data systems, distributed data pipelines, data engineering, data mining
 - **Domains:** AI in healthcare, medical imaging, security-aware business process modeling, knowledge graphs
 
-## Research Interests
+## Hobbies
 
-I am broadly interested in:
-
-<div class="row g-3">
-  <div class="col-md-6">
-    <ul>
-      <li>Foundation models and LLMs</li>
-      <li>Information extraction</li>
-      <li>Multimodal learning</li>
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <ul>
-      <li>Frugal AI</li>
-      <li>AI in healthcare</li>
-      <li>Deep Learning</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ## Hobbies
-
-Language Exchange · Reading · Tennis · Football · Cycling · Traveling · Hiking -->
+Language Exchange · Reading · Tennis · Cycling · Traveling · Hiking

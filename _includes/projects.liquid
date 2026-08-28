@@ -1,8 +1,18 @@
 <div class="col">
   <div class="card h-100 hoverable">
+    {% if project.links_only and project.paper_url %}
+      {% assign project_card_link = project.paper_url %}
+      {% assign project_card_external = true %}
+    {% elsif project.redirect %}
+      {% assign project_card_link = project.redirect %}
+      {% assign project_card_external = true %}
+    {% else %}
+      {% assign project_card_link = project.url | relative_url %}
+      {% assign project_card_external = false %}
+    {% endif %}
     {% unless project.redirect %}
       {% if project.img %}
-        <a href="{{ project.url | relative_url }}" class="card-img-link">
+        <a href="{{ project_card_link }}" class="card-img-link"{% if project_card_external %} target="_blank" rel="noopener noreferrer"{% endif %}>
           <div class="project-card-img-wrap">
             {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 50vw, 100vw" alt="project thumbnail" class="card-img-top" %}
           </div>
@@ -18,7 +28,7 @@
     <div class="card-body d-flex flex-column">
       <div class="project-header">
         {% unless project.redirect %}
-          <a href="{{ project.url | relative_url }}" class="card-title-link">
+          <a href="{{ project_card_link }}" class="card-title-link"{% if project_card_external %} target="_blank" rel="noopener noreferrer"{% endif %}>
             <h2 class="card-title">{{ project.title }}</h2>
           </a>
         {% else %}
@@ -43,9 +53,23 @@
       
       {% unless project.redirect %}
         <div class="project-footer mt-auto">
-          <a href="{{ project.url | relative_url }}" class="project-detail-link" onclick="event.stopPropagation();">
-            View details <i class="fa-solid fa-arrow-right fa-sm ms-1"></i>
-          </a>
+          {% if project.links_only %}
+            <div class="project-resource-links d-flex flex-wrap gap-2">
+              {% if project.paper_url %}
+                <a href="{{ project.paper_url }}" class="project-detail-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Preprint <i class="fa-solid fa-arrow-up-right-from-square fa-sm ms-1"></i></a>
+              {% endif %}
+              {% if project.code_url %}
+                <a href="{{ project.code_url }}" class="project-detail-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Code <i class="fa-solid fa-arrow-up-right-from-square fa-sm ms-1"></i></a>
+              {% endif %}
+              {% if project.dataset_url %}
+                <a href="{{ project.dataset_url }}" class="project-detail-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Dataset <i class="fa-solid fa-arrow-up-right-from-square fa-sm ms-1"></i></a>
+              {% endif %}
+            </div>
+          {% else %}
+            <a href="{{ project.url | relative_url }}" class="project-detail-link" onclick="event.stopPropagation();">
+              View details <i class="fa-solid fa-arrow-right fa-sm ms-1"></i>
+            </a>
+          {% endif %}
           {% if project.github %}
             <a href="{{ project.github }}" class="github-link d-block mt-1" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
               <i class="fa-brands fa-github"></i> View on GitHub
@@ -60,7 +84,7 @@
         </div>
       {% endunless %}
     </div>
-    {% unless project.redirect %}
+    {% unless project.redirect or project.links_only %}
       <a href="{{ project.url | relative_url }}" class="card-overlay-link"></a>
     {% endunless %}
   </div>

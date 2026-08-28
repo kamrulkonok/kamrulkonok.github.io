@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Prospective PhD applicant (Fall 2026) in foundation models, retrieval-augmented generation, and multimodal learning
+subtitle: Lecturer at AIUB | Prospective PhD Applicant
 
 profile:
   align: right
@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p>+88 018 64 208599</p>
     <p>Dhaka, Bangladesh</p>
-    <p><a href="mailto:mdkamrul.islam@student-cs.fr">mdkamrul.islam@student-cs.fr</a></p>
+    <p><a href="mailto:mdkamrul.islam@aiub.edu.fr">mdkamrul.islam@aiub.edu</a></p>
     <p><a href="mailto:mdkamrul.islam@hotmail.com">mdkamrul.islam@hotmail.com</a></p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"

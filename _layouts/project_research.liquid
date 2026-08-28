@@ -6,23 +6,36 @@ layout: default
 {% endif %}
 
 <div class="post">
-  <header class="post-header">
+  <header class="post-header{% if page.links_only %} text-center{% endif %}">
+    {% unless page.links_only %}
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.title_subtitle and page.title_subtitle != "" %}
       <div class="post-description mb-2">{{ page.title_subtitle | markdownify }}</div>
     {% endif %}
+    {% endunless %}
     {% if page.authors_list and page.authors_list.size > 0 %}
       <div class="post-authors text-muted mb-2">
         {% for a in page.authors_list %}
-          <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer" class="author-link">{{ a.name }}</a>{% if forloop.last %}¹{% else %}¹, {% endif %}
+          {% if a.url %}
+            <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer" class="author-link">{{ a.name }}</a>
+          {% else %}
+            <span class="author-link">{{ a.name }}</span>
+          {% endif %}
+          {% unless forloop.last %}, {% endunless %}
         {% endfor %}
-        {% if page.authors_affiliation %}
-          <div class="authors-affiliation mt-1">{{ page.authors_affiliation }}</div>
-        {% endif %}
+        {% unless page.links_only %}
+          {% if page.authors_affiliation %}
+            <div class="authors-affiliation mt-1">{{ page.authors_affiliation }}</div>
+          {% endif %}
+        {% endunless %}
       </div>
     {% elsif page.authors and page.authors != "" %}
       <div class="post-authors text-muted mb-2">{{ page.authors | markdownify }}</div>
     {% endif %}
+    {% if page.links_only and page.conference and page.conference != "" %}
+      <p class="post-description mb-3">{{ page.conference }}</p>
+    {% endif %}
+    {% unless page.hide_research_nav or page.links_only %}
     <nav class="research-nav mb-3 py-3" aria-label="Page sections">
       <div class="d-flex flex-wrap justify-content-center gap-2 gap-md-3">
         {% if page.abstract and page.abstract != "" %}<a href="#abstract">Abstract</a>{% endif %}
@@ -36,6 +49,7 @@ layout: default
         <a href="#future-work">Limitations</a>
       </div>
     </nav>
+    {% endunless %}
     {% if page.preprint_url or page.paper_url or page.code_url or page.report_pdf_url or page.slides_url or page.poster_url or page.dataset_url %}
       <div class="project-research-links d-flex justify-content-center flex-wrap gap-3 mb-2">
         {% if page.preprint_url or page.paper_url %}
@@ -58,6 +72,7 @@ layout: default
         {% endif %}
       </div>
     {% endif %}
+    {% unless page.links_only %}
     {% if page.taglines and page.taglines.size > 0 %}
       <div class="post-description mb-2">
         {% for t in page.taglines %}<p class="mb-1">{{ t }}</p>{% endfor %}
@@ -65,9 +80,11 @@ layout: default
     {% elsif page.tagline and page.tagline != "" %}
       <p class="post-description">{{ page.tagline }}</p>
     {% endif %}
+    {% endunless %}
   </header>
 
   <article>
+    {% unless page.links_only %}
     {% if page.teaser_image and page.teaser_image != "" %}
       <figure class="figure mb-4">
         {% include figure.liquid loading="eager" path=page.teaser_image sizes="(min-width: 768px) 80vw, 100vw" alt="Overview" class="figure-img img-fluid rounded" %}
@@ -111,6 +128,7 @@ layout: default
     <div class="project-research-content">
       {{ content }}
     </div>
+    {% endunless %}
 
     <div class="research-back-link mt-5 pt-4 border-top">
       <a href="{{ '/research-work/' | relative_url }}" class="research-back-link-a"><i class="fa-solid fa-arrow-left me-2" aria-hidden="true"></i>Back to Research Work</a>
