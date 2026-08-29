@@ -27,7 +27,7 @@ latest_posts:
 
 I am a Lecturer in the Department of Computer Science at [American International University-Bangladesh (AIUB)](https://www.aiub.edu/), with research interests spanning [Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Geometric Deep Learning, and AI in Healthcare](https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam).
 
-I have completed the **Erasmus Mundus Joint Master Degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/)**, studying across CentraleSupélec, Universitat Politècnica de Catalunya (UPC), and Université Libre de Bruxelles (ULB). For my master's thesis, supervised by [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr), I worked on Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) for security requirement extraction from Business Process Model and Notation (BPMN 2.0), leading to a publication at the BPM Forum 2026. I also earned a **Bachelor of Engineering in Software Engineering** from [Sichuan University](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm).
+I have completed the **Erasmus Mundus Joint Master Degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/)**, studying across CentraleSupélec, Universitat Politècnica de Catalunya (UPC), and Université Libre de Bruxelles (ULB). For my [master's thesis](https://arxiv.org/abs/2608.14370), supervised by [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr), I worked on Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) for security requirement extraction from Business Process Model and Notation (BPMN 2.0), leading to a publication at the BPM Forum 2026. Previously, I earned a **Bachelor of Engineering in Software Engineering** from [Sichuan University](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm).
 
 My current research interests lie in **Multimodal Large Language Models (MLLMs), AI in Healthcare, Frugal LLMs, and Retrival-augmented Generation (RAG)**. 
 When I’m not working, I enjoy practicing new languages or playing tennis.
@@ -48,9 +48,9 @@ My academic and research experiences reflect this exploration:
 
 - **Master's Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, accepted at the [BPM Forum of the 24th International Conference on Business Process Management (BPM 2026)](https://www.yorku.ca/events/bpm2026/program/forum/#forum3). [[Preprint]](https://arxiv.org/abs/2608.14370)
   
-- **Graduate Research:** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs using large scale Chest X-ray Dataset to improve feature representation and cluster separability while reducing reliance on data augmentation. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
+- **Graduate Research Assistant:** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs using large scale Chest X-ray Dataset to improve feature representation and cluster separability while reducing reliance on data augmentation. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
   
-- **Undergraduate Thesis:** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [Brain Tumor Detection and Classification Using Convolutional Neural Networks]({{ '/research-work/16_brain_tumor_cnn/' | relative_url }}).
+- **Capstone Project:** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [Brain Tumor Detection and Classification Using Convolutional Neural Networks]({{ '/research-work/16_brain_tumor_cnn/' | relative_url }}).
 
 ## Expertise
 
