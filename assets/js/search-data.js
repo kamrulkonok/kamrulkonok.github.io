@@ -407,7 +407,7 @@ ninja.data = [{
           section: "News",},{id: "news-completed-my-erasmus-mundus-joint-master-s-degree-in-big-data-management-and-analytics",
           title: 'Completed my Erasmus Mundus Joint Master’s degree in Big Data Management and Analytics...',
           description: "",
-          section: "News",},{id: "news-joined-american-international-university-bangladesh-aiub-as-a-lecturer-in-the-department-of-computer-science-see-my-faculty-profile",
+          section: "News",},{id: "news-joined-american-international-university-bangladesh-aiub-as-a-lecturer-in-the-department-of-computer-science",
           title: 'Joined American International University-Bangladesh (AIUB) as a Lecturer in the Department of Computer...',
           description: "",
           section: "News",},{id: "news-paper-accepted-at-the-24th-international-conference-on-business-process-management-bpm-2026-bpm-forum-edition-a-hybrid-llm-based-framework-for-automated-security-annotations-generation-in-business-process-models",
