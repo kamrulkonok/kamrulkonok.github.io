@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "start": "bundle exec jekyll serve --livereload --port 8080 --host 0.0.0.0",
+    "serve": "bundle exec jekyll serve --livereload",
+    "build": "bundle exec jekyll build",
+    "watch": "bundle exec jekyll build --watch"
+  },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "1.4.0",
     "prettier": "3.1.1"

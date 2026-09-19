@@ -29,7 +29,7 @@
       <ul class="navbar-nav mr-auto flex-nowrap">
         {% for social in site.data.socials %}
           {% case social[0] %}
-            {% when 'google_scholar_id' %}
+            {% when 'scholar_userid' %}
               <li class="nav-item">
                 <a class="nav-link social-icon" href="https://scholar.google.com/citations?user={{ social[1] }}&hl=en" title="Google Scholar" target="_blank" rel="noopener noreferrer">
                   <i class="ai ai-google-scholar"></i>

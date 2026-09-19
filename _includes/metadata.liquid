@@ -126,9 +126,6 @@
       {% when 'instagram_id' %}
         {% capture link %}https://instagram.com/{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
-      {% when 'kaggle_id' %}
-        {% capture link %}https://www.kaggle.com/{{ social[1] }}{% endcapture %}
-        {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'keybase_username' %}
         {% capture link %}https://keybase.io/{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
@@ -174,7 +171,7 @@
           {% assign sameaslinks = sameaslinks | push: link %}
         {% endcomment %}
       {% when 'scholar_userid' %}
-        {% capture link %}https://scholar.google.com/citations?user={{ social[1] }}{% endcapture %}
+        {% capture link %}https://scholar.google.com/citations?user={{ social[1] }}&hl=en{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'scopus_id' %}
         {% capture link %}https://www.scopus.com/authid/detail.uri?authorId={{ social[1] }}{% endcapture %}

@@ -73,13 +73,6 @@
                     <span class="sr-only">ORCID</span>
                   </a>
                 </li>
-              {% when 'kaggle_id' %}
-                <li class="nav-item">
-                  <a class="nav-link social-icon" href="https://www.kaggle.com/{{ social[1] }}" title="Kaggle" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-kaggle"></i>
-                    <span class="sr-only">Kaggle</span>
-                  </a>
-                </li>
             {% endcase %}
           {% endfor %}
         </ul>

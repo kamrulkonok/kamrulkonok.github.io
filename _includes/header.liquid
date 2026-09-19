@@ -29,6 +29,13 @@
         <ul class="navbar-nav mr-auto flex-nowrap">
           {% for social in site.data.socials %}
             {% case social[0] %}
+              {% when 'scholar_userid' %}
+                <li class="nav-item">
+                  <a class="nav-link social-icon" href="https://scholar.google.com/citations?user={{ social[1] }}&hl=en" title="Google Scholar" target="_blank" rel="noopener noreferrer">
+                    <i class="ai ai-google-scholar"></i>
+                    <span class="sr-only">Google Scholar</span>
+                  </a>
+                </li>
               {% when 'email' %}
                 <li class="nav-item">
                   <a class="nav-link social-icon" href="mailto:{{ social[1] | encode_email }}" title="Email" target="_blank" rel="noopener noreferrer">
@@ -55,13 +62,6 @@
                   <a class="nav-link social-icon" href="https://orcid.org/{{ social[1] }}" title="ORCID" target="_blank" rel="noopener noreferrer">
                     <i class="ai ai-orcid"></i>
                     <span class="sr-only">ORCID</span>
-                  </a>
-                </li>
-              {% when 'kaggle_id' %}
-                <li class="nav-item">
-                  <a class="nav-link social-icon" href="https://www.kaggle.com/{{ social[1] }}" title="Kaggle" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-kaggle"></i>
-                    <span class="sr-only">Kaggle</span>
                   </a>
                 </li>
             {% endcase %}
