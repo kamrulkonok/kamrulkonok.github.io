@@ -1,6 +1,9 @@
 <div class="col">
   <div class="card h-100 hoverable">
-    {% if project.links_only and project.paper_url %}
+    {% if project.links_only and project.publication_url %}
+      {% assign project_card_link = project.publication_url %}
+      {% assign project_card_external = true %}
+    {% elsif project.links_only and project.paper_url %}
       {% assign project_card_link = project.paper_url %}
       {% assign project_card_external = true %}
     {% elsif project.redirect %}
@@ -56,7 +59,7 @@
           {% if project.links_only %}
             <div class="project-resource-links d-flex flex-wrap gap-2">
               {% if project.paper_url %}
-                <a href="{{ project.paper_url }}" class="project-detail-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Preprint <i class="fa-solid fa-arrow-up-right-from-square fa-sm ms-1"></i></a>
+                <a href="{{ project.paper_url }}" class="project-detail-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">{% if project.publication_status == 'published' %}Paper{% else %}Preprint{% endif %} <i class="fa-solid fa-arrow-up-right-from-square fa-sm ms-1"></i></a>
               {% endif %}
               {% if project.code_url %}
                 <a href="{{ project.code_url }}" class="project-detail-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Code <i class="fa-solid fa-arrow-up-right-from-square fa-sm ms-1"></i></a>

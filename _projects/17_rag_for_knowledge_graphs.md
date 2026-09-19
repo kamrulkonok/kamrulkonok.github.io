@@ -9,6 +9,7 @@ year: 2024
 semester: Summer 2024
 time_order: 20242
 research: true
+publication_status: preprint
 importance: 2
 permalink: /research-work/17_rag_for_knowledge_graphs/
 authors_list:

@@ -43,7 +43,8 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      source_directory = File.expand_path('../_sass', __dir__)
+      CacheDigester.new(file_name: file_name, directory: source_directory).digest!
     end
   end
 end

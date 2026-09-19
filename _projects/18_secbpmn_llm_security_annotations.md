@@ -9,6 +9,7 @@ semester: Spring 2026
 time_order: 20261
 research: true
 importance: 1
+publication_status: published
 permalink: /research-work/18_secbpmn_llm_security_annotations/
 links_only: true
 authors_list:

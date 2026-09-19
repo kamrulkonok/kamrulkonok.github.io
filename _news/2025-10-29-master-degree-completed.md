@@ -5,5 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Completed my Erasmus Mundus Joint Master's degree in Big Data Management and Analytics
-
+Successfully completed the ⁠Erasmus Mundus Joint Master’s Degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/).

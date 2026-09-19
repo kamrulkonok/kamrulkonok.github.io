@@ -661,6 +661,228 @@ article {
   }
 }
 
+.homepage-experience-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  margin: 2.5rem 0 2.75rem;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid #edf0f2;
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(35, 45, 55, 0.12);
+}
+
+.homepage-experience-column {
+  padding: 0 1.25rem 0 0;
+}
+
+.homepage-teaching-column {
+  padding: 0 0 0 1.25rem;
+  border-left: 1px solid #e2e5e8;
+}
+
+.homepage-section-heading {
+  padding-bottom: 0.85rem;
+  border-bottom: 3px solid #dfe3e6;
+
+  h2 {
+    margin: 0;
+    color: #2e4053;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: 0;
+  }
+
+  i {
+    margin-right: 0.55rem;
+    color: #a40000;
+    font-size: 1.25rem;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 0.45rem;
+    color: #a40000;
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.homepage-section-heading-plain {
+  h2 {
+    font-size: 1.55rem;
+  }
+}
+
+.homepage-experience-timeline {
+  position: relative;
+  margin: 1.4rem 0 0 0.35rem;
+  padding-left: 1.25rem;
+  border-left: 3px solid #d9a6a6;
+}
+
+.homepage-timeline-entry {
+  position: relative;
+  padding: 0 0 1.45rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.65rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: #a40000;
+    box-shadow: 0 0 0 4px #dfb6b6;
+  }
+
+  h3 {
+    margin: 0 0 0.25rem;
+    color: #30363b;
+    font-family: inherit;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  time {
+    color: #a40000;
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+  }
+}
+
+.homepage-experience-meta {
+  margin: 0 0 0.55rem;
+  color: #686868;
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.homepage-semester-card {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid #e5e5e5;
+  border-left: 7px solid #a40000;
+  border-radius: 0.7rem;
+  background: #f5f5f5;
+  box-shadow: 0 3px 8px rgba(35, 45, 55, 0.04);
+
+  h3 {
+    margin: 0 0 0.6rem;
+    color: #202326;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin: 0;
+    color: #4f4f4f;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+}
+
+.homepage-service-card {
+  margin-top: 1.5rem;
+
+  .homepage-section-heading {
+    padding-bottom: 0.7rem;
+  }
+
+  .homepage-service-entry {
+    margin-top: 1.25rem;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid #e5e5e5;
+    border-left: 7px solid #a40000;
+    border-radius: 0.7rem;
+    background: #f5f5f5;
+  }
+
+  h3 {
+    margin: 0 0 0.55rem;
+    color: #202326;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin: 0;
+    color: #4f4f4f;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 767px) {
+  .homepage-experience-card {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .homepage-experience-column,
+  .homepage-teaching-column {
+    padding: 0;
+  }
+
+  .homepage-teaching-column {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e5e8;
+    border-left: 0;
+  }
+
+  .homepage-experience-card .homepage-section-heading h2,
+  .homepage-experience-card .homepage-section-heading-plain h2 {
+    font-size: 1.35rem;
+  }
+
+  .homepage-service-card {
+    margin-top: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage-experience-card {
+    min-height: 520px;
+  }
+
+  .homepage-experience-column,
+  .homepage-teaching-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homepage-teaching-column {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-experience-card {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+  }
+
+  .homepage-semester-card,
+  .homepage-service-card .homepage-service-entry {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 // TODO: redefine content layout.
 
 /******************************************************************************

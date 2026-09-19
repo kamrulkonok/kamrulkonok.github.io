@@ -76,7 +76,7 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit"><i class="fa-solid fa-newspaper homepage-heading-icon" aria-hidden="true"></i> news</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}

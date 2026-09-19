@@ -5,5 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Bachelor's Degree Achieved: Graduated with Bachelor of Engineering in Software Engineering from Sichuan University
-
+Bachelor of Engineering in Software Engineering — Graduated with Distinction from [Sichuan University](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm)

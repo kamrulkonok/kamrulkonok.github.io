@@ -7,6 +7,7 @@ year: 2024
 semester: Fall 2024
 time_order: 20243
 research: true
+publication_status: preprint
 permalink: /research-work/15_bdrp_geometric_deep_learning/
 authors_list:
   - name: Md Kamrul Islam

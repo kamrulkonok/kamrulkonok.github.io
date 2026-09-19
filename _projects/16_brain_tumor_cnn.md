@@ -10,6 +10,7 @@ year: 2021
 semester: Fall 2021
 time_order: 20213
 research: true
+publication_status: preprint
 permalink: /research-work/16_brain_tumor_cnn/
 importance: 1
 authors_list:
