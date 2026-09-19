@@ -9,9 +9,9 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-research",
-          title: "research",
-          description: "A curated selection of my academic and research contributions.",
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Selected publications and research preprints in machine learning, retrieval-augmented generation, and applied AI.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research-work/";
@@ -398,14 +398,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-bachelor-s-degree-achieved-graduated-with-bachelor-of-engineering-in-software-engineering-from-sichuan-university",
-          title: 'Bachelor’s Degree Achieved: Graduated with Bachelor of Engineering in Software Engineering from Sichuan...',
+            },},{id: "news-bachelor-of-engineering-in-software-engineering-graduated-with-distinction-from-sichuan-university",
+          title: 'Bachelor of Engineering in Software Engineering — Graduated with Distinction from Sichuan University...',
           description: "",
           section: "News",},{id: "news-research-milestone-published-paper-on-ai-in-software-engineering-education-at-csee-amp-amp-t-2024",
           title: 'Research Milestone: Published paper on AI in Software Engineering Education at CSEE&amp;amp;amp;T 2024...',
           description: "",
-          section: "News",},{id: "news-completed-my-erasmus-mundus-joint-master-s-degree-in-big-data-management-and-analytics",
-          title: 'Completed my Erasmus Mundus Joint Master’s degree in Big Data Management and Analytics...',
+          section: "News",},{id: "news-successfully-completed-the-erasmus-mundus-joint-master-s-degree-in-big-data-management-and-analytics-bdma",
+          title: 'Successfully completed the ⁠Erasmus Mundus Joint Master’s Degree in Big Data Management and...',
           description: "",
           section: "News",},{id: "news-joined-american-international-university-bangladesh-aiub-as-a-lecturer-in-the-department-of-computer-science",
           title: 'Joined American International University-Bangladesh (AIUB) as a Lecturer in the Department of Computer...',
@@ -458,6 +458,11 @@ ninja.data = [{
           description: "Hybrid LLM + rule-based framework for generating SecBPMN2 security annotations from BPMN models and natural-language requirements, with higher precision and substantially faster annotation than manual expert labeling.",
           section: "Projects",handler: () => {
               window.location.href = "/research-work/18_secbpmn_llm_security_annotations/";
+            },},{id: "projects-navigating-the-ai-frontier-ai-in-software-engineering-education",
+          title: 'Navigating the AI Frontier: AI in Software Engineering Education',
+          description: "A critical literature review of curriculum models, pedagogical approaches, and persistent challenges in integrating AI and LLMs into software engineering education.",
+          section: "Projects",handler: () => {
+              window.location.href = "/research-work/19_ai_navigator_software_engineering_education/";
             },},{
         id: 'social-scholar',
         title: 'Google Scholar',
