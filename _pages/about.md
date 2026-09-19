@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lecturer at AIUB | MSc in Big Data Management and Analytics (Erasmus Mundus)
+subtitle: Lecturer in the Department of Computer Science || Prospective PhD Applicant
 
 profile:
   align: right
