@@ -459,25 +459,11 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/research-work/18_secbpmn_llm_security_annotations/";
             },},{
-        id: 'social-email',
-        title: 'email',
+        id: 'social-scholar',
+        title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6D%64%6B%61%6D%72%75%6C.%69%73%6C%61%6D@%73%74%75%64%65%6E%74-%63%73.%66%72", "_blank");
-        },
-      },{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/kamrulkonok", "_blank");
-        },
-      },{
-        id: 'social-linkedin',
-        title: 'LinkedIn',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.linkedin.com/in/kamrulkonok", "_blank");
+          window.open("https://scholar.google.com/citations?user=BRSs1h4AAAAJ&hl=en", "_blank");
         },
       },{
         id: 'social-orcid',
@@ -487,11 +473,25 @@ ninja.data = [{
           window.open("https://orcid.org/0009-0000-8052-491X", "_blank");
         },
       },{
-        id: 'social-kaggle',
-        title: 'Kaggle',
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.kaggle.com/kamrulislamkonok", "_blank");
+          window.open("https://www.linkedin.com/in/kamrulkonok", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/kamrulkonok", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%64%6B%61%6D%72%75%6C.%69%73%6C%61%6D@%73%74%75%64%65%6E%74-%63%73.%66%72", "_blank");
         },
       },{
       id: 'light-theme',
