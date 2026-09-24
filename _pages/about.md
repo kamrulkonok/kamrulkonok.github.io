@@ -2,13 +2,15 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lecturer in the Department of Computer Science | AI Researcher
+subtitle: Lecturer in the Department of Computer Science and Data Science | AI Researcher
 profile:
   align: right
   image: prof_pic.png
-  image_circular: true # crops the image to make it circular
+  image_circular: true
   more_info: >
-    <p>Dhaka, Bangladesh</p>
+    <p>American International University-Bangladesh (AIUB)<br>
+    408/1 (Old KA 66/1), Kuratoli<br>
+    Khilkhet, Dhaka 1229, Bangladesh</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -23,15 +25,27 @@ latest_posts:
 ---
 
 ## <i class="fa-solid fa-user-graduate homepage-heading-icon" aria-hidden="true"></i> About Me
-
 <div class="homepage-about-intro" markdown="1">
+<p>
+  I am a Lecturer in the Departments of Computer Science and Data Science at
+  <a href="https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu">
+    American International University-Bangladesh (AIUB)
+  </a>.
+</p>
 
-I am a Lecturer in the Department of Computer Science at [American International University-Bangladesh (AIUB)](https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu) and an AI researcher interested in the intersection of Natural Language Processing (NLP), Deep Learning, and Information Retrieval.
+<p>
+  I completed the Erasmus Mundus Joint Master’s Degree in
+  <a href="https://bdma.ulb.ac.be/">Big Data Management and Analytics (BDMA)</a>
+  as an Erasmus Mundus Scholar. As part of the programme, I studied at three
+  European universities: Université Libre de Bruxelles (ULB), Universitat
+  Politècnica de Catalunya (UPC), and CentraleSupélec. Before that, I earned a
+  B.Eng. in Software Engineering from
+  <a href="https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm">Sichuan University</a>,
+  where I graduated with distinction as a Belt and Road Initiative Scholarship
+  recipient.
+</p>
 
-My research focuses on information retrieval, natural language understanding, and representation learning, with an emphasis on foundation models and deep learning. My previous and ongoing work includes Large Language Models (LLMs), Multimodal Large Language Models (MLLMs), Retrieval-Augmented Generation (RAG), Knowledge Graphs, and LLM-based code generation, with applications in business process modeling, data visualization, and healthcare. My recent research on LLM-assisted security annotation of business process models was accepted at the BPM Forum 2026. I am currently developing my research interests around NLP, LLMs, and multimodal AI, with the goal of pursuing doctoral research in this area.
-
-I hold an Erasmus Mundus Joint Master’s Degree in [Big Data Management and Analytics (BDMA)](https://bdma.ulb.ac.be/), for which I was awarded an Erasmus Mundus Partner Country Scholarship. The programme is jointly delivered across leading European universities, and I studied at Université Libre de Bruxelles (ULB), Universitat Politècnica de Catalunya (UPC), and CentraleSupélec. I also hold a B.Eng. in Software Engineering from [Sichuan University](https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm), where I graduated with distinction and was awarded the Belt and Road Initiative Scholarship throughout my undergraduate studies for consistently maintaining a high level of academic attainment.
-
+My research journey began with deep learning for medical image analysis and later expanded into geometric deep learning for large-scale medical imaging. During my master’s research, I investigated large language models, retrieval-augmented generation, and semantic reasoning for security annotation of structured business process models. Building on these experiences, my current research interests focus on foundation models, information retrieval, multimodal AI, and deep learning, with applications in software engineering, healthcare, and data visualization.
 </div>
 
 <blockquote class="collab-note">
@@ -48,7 +62,7 @@ I hold an Erasmus Mundus Joint Master’s Degree in [Big Data Management and Ana
 
 My research experience includes work across language models, information retrieval, and deep learning:
 
-- **Master’s Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, accepted at the [BPM Forum of the 24th International Conference on Business Process Management (BPM 2026)](https://www.yorku.ca/events/bpm2026/program/forum/#forum3). Supervisor: [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr). The work investigates LLMs and RAG for automated security annotation of BPMN 2.0 models. [[Preprint]](https://arxiv.org/abs/2608.14370)
+- **Master’s Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, published at the [BPM Forum of the 24th International Conference on Business Process Management (BPM 2026)](https://link.springer.com/chapter/10.1007/978-3-032-37877-4_10). Supervisor: [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr). The work investigates LLMs and RAG for automated security annotation of BPMN 2.0 models. [[Preprint]](https://arxiv.org/abs/2608.14370)
   
 - **Graduate Research Assistant:** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs using a large-scale chest X-ray dataset to improve feature representation and cluster separability while reducing reliance on data augmentation. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
   
@@ -63,22 +77,28 @@ My research experience includes work across language models, information retriev
     <div class="homepage-experience-timeline" aria-labelledby="experience-heading">
       <article class="homepage-timeline-entry">
         <h3>Lecturer</h3>
-        <p class="homepage-experience-meta">American International University-Bangladesh (AIUB)</p>
+        <p class="homepage-experience-meta">American International University-Bangladesh (AIUB)
+        <br>Dhaka, Bangladesh</p>
         <time>April 2026 – Present</time>
       </article>
+
       <article class="homepage-timeline-entry">
         <h3>AI Research Engineer Intern</h3>
-        <p class="homepage-experience-meta">Université Paris-Est Créteil</p>
+        <p class="homepage-experience-meta">Université Paris-Est Créteil
+        <br>Paris, France</p>
         <time>May 2025 – Oct 2025</time>
       </article>
-       <article class="homepage-timeline-entry">
+
+      <article class="homepage-timeline-entry">
         <h3>Graduate Research Assistant</h3>
-        <p class="homepage-experience-meta">CentraleSupélec, Université Paris-Saclay</p>
+        <p class="homepage-experience-meta">CentraleSupélec, Université Paris-Saclay
+        <br>Paris, France</p>
         <time>Oct 2024 – Mar 2025</time>
       </article>
+
       <article class="homepage-timeline-entry">
-        <h3>Data Engineer Intern</h3>
-        <p class="homepage-experience-meta">Chengdu Suncape Data Co., Ltd</p>
+        <h3>Big Data Engineer Intern</h3>
+        <p class="homepage-experience-meta">Chengdu Suncape Data Co., Ltd <br>Chengdu, China</p>
         <time>Dec 2020 – May 2021</time>
       </article>
     </div>
@@ -89,13 +109,31 @@ My research experience includes work across language models, information retriev
       <div class="homepage-section-heading homepage-section-heading-plain">
         <h2 id="teaching-heading">Teaching Experience</h2>
       </div>
+
+      <div class="homepage-semester-card">
+        <h3>Fall 2026/27</h3>
+        <p>
+          CSC 4162: Programming in Python<br>
+          BDS2203: Data Processing<br>
+          BDS3106: Programming for Data Science
+        </p>
+      </div>
+
       <div class="homepage-semester-card">
         <h3>Summer 2025/26</h3>
-        <p>CSC 3216: Compiler Design<br>CSC 4162: Programming in Python<br>BDS3208: Data Visualization</p>
+        <p>
+          CSC 3216: Compiler Design<br>
+          CSC 4162: Programming in Python<br>
+          BDS3208: Data Visualization
+        </p>
       </div>
+
       <div class="homepage-semester-card">
         <h3>Spring 2025/26</h3>
-        <p>CSC 2106: Data Structures<br>CSC 3216: Compiler Design</p>
+        <p>
+          CSC 2106: Data Structures<br>
+          CSC 3216: Compiler Design
+        </p>
       </div>
     </section>
 
