@@ -5,7 +5,7 @@ permalink: /
 subtitle: Lecturer in the Department of Computer Science and Data Science | AI Researcher
 profile:
   align: right
-  image: prof_pic.png
+  image: profile_photo.jpeg
   image_circular: true
   more_info: >
     <p>American International University-Bangladesh (AIUB)<br>
