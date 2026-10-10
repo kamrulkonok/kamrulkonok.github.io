@@ -27,26 +27,44 @@ latest_posts:
 ## <i class="fa-solid fa-user-graduate homepage-heading-icon" aria-hidden="true"></i> About Me
 <div class="homepage-about-intro" markdown="1">
 <p>
-  I am a Lecturer in the Departments of Computer Science and Data Science at
+  I am currently working as a Lecturer in the Departments of Computer Science and Data Science at
   <a href="https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu">
     American International University-Bangladesh (AIUB)
   </a>.
 </p>
 
 <p>
-  I completed the Erasmus Mundus Joint Master’s Degree in
+  I completed the Erasmus Mundus Joint Master's Degree in
   <a href="https://bdma.ulb.ac.be/">Big Data Management and Analytics (BDMA)</a>
-  as an Erasmus Mundus Scholar. As part of the programme, I studied at three
-  European universities: Université Libre de Bruxelles (ULB), Universitat
-  Politècnica de Catalunya (UPC), and CentraleSupélec. Before that, I earned a
-  B.Eng. in Software Engineering from
-  <a href="https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm">Sichuan University</a>,
-  where I graduated with distinction as a Belt and Road Initiative Scholarship
-  recipient.
+  at <a href="https://www.centralesupelec.fr">CentraleSupélec</a>.
+  During my master's, I worked at the Images, Signals and Intelligent Systems Laboratory
+  (LISN), in close collaboration with
+  <a href="https://list.cea.fr/en/">CEA-LIST</a>, under the supervision of
+  <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Tiphaine Henry</a>.
+  Before that, I earned a B.Eng. in Software Engineering from
+  <a href="https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm">Sichuan University</a>.
 </p>
 
-My research journey began with deep learning for medical image analysis and later expanded into geometric deep learning for large-scale medical imaging. During my master’s research, I investigated large language models, retrieval-augmented generation, and semantic reasoning for security annotation of structured business process models. Building on these experiences, my current research interests focus on foundation models, information retrieval, multimodal AI, and deep learning, with applications in software engineering, healthcare, and data visualization.
+<p>
+  My research journey began with deep learning for medical image analysis and later
+  expanded into geometric deep learning for large-scale medical imaging. My master's
+  research focused on using large language models (LLMs) and retrieval-augmented
+  generation (RAG) to automate security annotation in business process models.
+</p>
+
+<p>
+  Building on these experiences, my current research interests focus on foundation
+  models, information retrieval, agentic AI, and multimodal learning. I am particularly
+  interested in developing intelligent systems that can retrieve relevant information,
+  reason over structured knowledge, and perform complex tasks reliably.
+</p>
 </div>
+
+<p>
+  I am from Rajshahi, Bangladesh, and have had the good fortune to live and study in
+  several places, including France, Spain, Belgium, and China. I am an avid tennis
+  player and enjoy travelling around the world, hiking, and trying new foods.
+</p>
 
 <blockquote class="collab-note">
   <p><strong>Always happy to connect, exchange ideas, and explore potential collaborations.</strong></p>
