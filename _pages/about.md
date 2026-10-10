@@ -37,7 +37,7 @@ latest_posts:
   I completed the Erasmus Mundus Joint Master's Degree in
   <a href="https://bdma.ulb.ac.be/">Big Data Management and Analytics (BDMA)</a>
   at <a href="https://www.centralesupelec.fr">CentraleSupélec</a>.
-  During my master's, I worked at the Images, Signals and Intelligent Systems Laboratory (<a href="https://www.u-pec.fr/fr/recherche/laboratoires/laboratoire-images-signaux-et-systemes-intelligents-lissi-ea-3956">LISSI</a>), in close collaboration with
+  During my master's, I worked at the Images, Signals and Intelligent Systems Laboratory, in close collaboration with
   <a href="https://list.cea.fr/en/">CEA-LIST</a>, under the supervision of
   <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Tiphaine Henry</a>.
   Before that, I earned a B.Eng. in Software Engineering from
