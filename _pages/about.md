@@ -80,7 +80,7 @@ latest_posts:
 
 My research experience includes work across language models, information retrieval, and deep learning:
 
-- **Master’s Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, published at the [BPM Forum of the 24th International Conference on Business Process Management (BPM 2026)](https://link.springer.com/chapter/10.1007/978-3-032-37877-4_10). Supervisor: [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr). The work investigates LLMs and RAG for automated security annotation of BPMN 2.0 models. [[Preprint]](https://arxiv.org/abs/2608.14370)
+- **Master’s Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, published at the [BPM Forum of the 24th International Conference on Business Process Management (BPM 2026)](https://link.springer.com/chapter/10.1007/978-3-032-37877-4_10). Supervisor: [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr). The work investigates LLMs and RAG for automated security annotation of BPMN 2.0 models. [[ArXiv]](https://arxiv.org/abs/2608.14370)
   
 - **Graduate Research Assistant:** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs using a large-scale chest X-ray dataset to improve feature representation and cluster separability while reducing reliance on data augmentation. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
   
