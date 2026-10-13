@@ -481,6 +481,13 @@ ninja.data = [{
           window.open("https://orcid.org/0009-0000-8052-491X", "_blank");
         },
       },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Md-Kamrul-Islam-12/", "_blank");
+        },
+      },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
