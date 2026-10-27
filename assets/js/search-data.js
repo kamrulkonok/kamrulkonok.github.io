@@ -410,7 +410,10 @@ ninja.data = [{
           section: "News",},{id: "news-successfully-completed-the-erasmus-mundus-joint-master-s-degree-in-big-data-management-and-analytics-bdma",
           title: 'Successfully completed the ⁠Erasmus Mundus Joint Master’s Degree in Big Data Management and...',
           description: "",
-          section: "News",},{id: "news-joined-american-international-university-bangladesh-aiub-as-a-lecturer-in-the-department-of-computer-science",
+          section: "News",},{id: "news-our-work-unsupervised-chest-x-ray-clustering-with-group-equivariant-convolutions-was-presented-at-the-recent-advances-in-machine-learning-for-healthcare-ramh-2026-workshop-in-paris-france-hal-record",
+          title: 'Our work, Unsupervised Chest X-ray Clustering with Group Equivariant Convolutions, was presented at...',
+          description: "",
+          section: "News",},{id: "news-joined-american-international-university-bangladesh-aiub-as-a-lecturer-in-the-department-of-computer-science-and-department-of-data-science",
           title: 'Joined American International University-Bangladesh (AIUB) as a Lecturer in the Department of Computer...',
           description: "",
           section: "News",},{id: "news-our-paper-a-hybrid-llm-based-framework-for-automated-security-annotation-generation-in-business-process-models-has-been-published-in-the-business-process-management-forum-bpm-2026-part-of-the-24th-international-conference-on-business-process-management",
@@ -506,7 +509,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6D%64%6B%61%6D%72%75%6C.%69%73%6C%61%6D@%73%74%75%64%65%6E%74-%63%73.%66%72", "_blank");
+          window.open("mailto:%6D%64%6B%61%6D%72%75%6C.%69%73%6C%61%6D@%68%6F%74%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
       id: 'light-theme',
