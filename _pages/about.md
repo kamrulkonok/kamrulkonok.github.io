@@ -2,13 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lecturer in the Department of Computer Science and Data Science
+subtitle: Lecturer in Computer Science and Data Science | Prospective PhD Candidate
 profile:
   align: right
   image: profile_photo.jpeg
   image_circular: true
-  more_info: >
-    <p>Dhaka, Bangladesh</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,28 +24,32 @@ latest_posts:
 <div class="homepage-about-intro" markdown="1">
 <p>
   I am a Lecturer in Computer Science and Data Science at
-  <a href="https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu">
-    American International University-Bangladesh (AIUB)
-  </a>.
-I completed the <a href="https://bdma.ulb.ac.be/">Erasmus Mundus Joint Master's degree in Big Data Management and Analytics (BDMA)</a> at <a href="https://www.centralesupelec.fr">CentraleSupélec</a>, and a Bachelor of Engineering in Software Engineering at <a href="https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm">Sichuan University</a>.
+  American International University-Bangladesh (AIUB)
+  (<a href="https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu">Faculty Profile</a>),
+  with research focused on applied AI.
 </p>
 
 <p>
-  During my master's, I conducted research at the Images, Signals and Intelligent
-  Systems Laboratory in collaboration with
+  I completed the <a href="https://bdma.ulb.ac.be/">Erasmus Mundus Joint Master
+  Degree in Big Data Management and Analytics (BDMA)</a> and earned a
+  Bachelor of Engineering in Software Engineering from
+  <a href="https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm">Sichuan University</a>.
+</p>
+<p>
+  As part of my master's thesis, I worked as a Research Engineer Intern at the
+  Images, Signals and Intelligent Systems Laboratory in collaboration with
   <a href="https://list.cea.fr/en/">CEA-LIST</a>, under the supervision of
-  <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Dr. Tiphaine Henry</a>.
-  My research journey began with deep learning for medical image analysis,
-  progressed to geometric deep learning for large-scale medical imaging, and
-  later expanded to using large language models (LLMs) and retrieval-augmented
-  generation (RAG) to automate security annotation in business process models.
+  <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Dr. Tiphaine Henry</a>. My research has taken me from deep learning for medical image analysis and
+  geometric deep learning to exploring how large language models (LLMs) and
+  retrieval-augmented generation (RAG) can extract security requirements and
+  automate security annotation generation for business process models.
 </p>
 
 <p>
-  My research interests include foundation models, information retrieval,
-  agentic AI, and multimodal AI. I am particularly interested in building
-  intelligent systems that retrieve relevant information, reason over structured
-  knowledge, and reliably perform complex tasks.
+  <strong class="research-interests-label">Research Interests:</strong> <strong>Foundation models, information retrieval, agentic AI, and multimodal AI.</strong>
+  I am particularly interested in building intelligent systems that retrieve
+  relevant information, reason over structured knowledge, and reliably
+  perform complex tasks.
 </p>
 
 <p>
@@ -68,16 +70,17 @@ Originally from a beautiful village in northern Bangladesh, I have had the oppor
 
 My research experience includes work across language models, information retrieval, and deep learning:
 
-- **Master’s Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, published at the [BPM Forum of the 24th International Conference on Business Process Management (BPM 2026)](https://link.springer.com/chapter/10.1007/978-3-032-37877-4_10). Supervisor: [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr). The work investigates LLMs and RAG for automated security annotation of BPMN 2.0 models. [[ArXiv]](https://arxiv.org/abs/2608.14370)
+- **Master's Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, published as a book chapter in the proceedings of the **24th International Conference on Business Process Management (BPM 2026)**, as part of the *BPM Forum*. [[Book Chapter]](https://link.springer.com/chapter/10.1007/978-3-032-37877-4_10) • [[arXiv Preprint]](https://arxiv.org/abs/2608.14370)
   
-- **Graduate Research Assistant:** Developed *Unsupervised Chest X-ray Clustering with Group Equivariant Convolutions*, exploring unsupervised chest X-ray clustering using group-equivariant convolutional neural networks. The work was listed as a workshop poster abstract in the RAMH 2026 booklet. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
+- **Graduate Research Assistant:** *Unsupervised Chest X-ray Clustering with Group Equivariant Convolutions*. Explored unsupervised chest X-ray clustering using group-equivariant CNNs. The work was presented at the [Recent Advances in Machine Learning for Healthcare (RAMH 2026)](https://inria.hal.science/hal-05789640) workshop and included in its [[Workshop Booklet]](https://inria.hal.science/hal-05789640/file/ramh2026_booklet.pdf) • [[View project]]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
   
 - **Undergraduate Thesis:** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [Brain Tumor Detection and Classification Using Convolutional Neural Networks]({{ '/research-work/16_brain_tumor_cnn/' | relative_url }}).
 
 <section class="homepage-experience-card" aria-label="Experience, teaching, and service">
   <div class="homepage-experience-column">
     <div class="homepage-section-heading">
-      <h2 id="experience-heading"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experience</h2>
+      <h2 id="experience-heading"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience
+      </h2>
       <a href="{{ '/assets/pdf/CV_Research_Engineer_Kamrul.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download CV</a>
     </div>
     <div class="homepage-experience-timeline" aria-labelledby="experience-heading">
@@ -114,7 +117,7 @@ My research experience includes work across language models, information retriev
   <div class="homepage-teaching-column">
     <section aria-labelledby="teaching-heading">
       <div class="homepage-section-heading homepage-section-heading-plain">
-        <h2 id="teaching-heading">Teaching Experience</h2>
+        <h2 id="teaching-heading"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>Teaching Experience</h2>
       </div>
 
       <div class="homepage-semester-card">

@@ -1,0 +1,87 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header about-page-header">
+    <div class="about-header">
+      <div class="about-header-copy">
+        <h1 class="post-title">
+          {% if site.title == 'blank' %}
+            <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+            {{ site.last_name }} (Konok)
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+        <p class="desc" style="font-size: 0.95rem;">{{ page.subtitle }}</p>
+        <nav class="about-header-links" aria-label="Academic profile links">
+          <a href="mailto:{{ site.data.socials.email | encode_email }}" target="_blank" rel="noopener noreferrer" title="Email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+            <i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span>
+          </a>
+          <a href="https://orcid.org/{{ site.data.socials.orcid_id }}" target="_blank" rel="noopener noreferrer" title="ORCID">
+            <i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span>
+          </a>
+          <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/{{ site.data.socials.github_username }}" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+          </a>
+          <a href="{{ '/assets/pdf/CV_Research_Engineer_Kamrul.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" title="Curriculum Vitae">
+            <i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>Curriculum Vitae</span>
+          </a>
+        </nav>
+      </div>
+      {% if page.profile %}
+        {% include profile.liquid %}
+      {% endif %}
+    </div>
+  </header>
+
+  <article>
+    <div class="clearfix about-content">{{ content }}</div>
+
+    <!-- News -->
+    {% if page.announcements and page.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit"><i class="fa-solid fa-newspaper homepage-heading-icon" aria-hidden="true"></i> news</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    {% comment %}{% include mapmyvisitors_map.liquid %}{% endcomment %}
+    {% include mapmyvisitors_tracking.liquid %}
+
+    <!-- Latest posts -->
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/research/' | relative_url }}" style="color: inherit">selected publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% include social.liquid %}</div>
+
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      {% include newsletter.liquid center=true %}
+    {% endif %}
+  </article>
+</div>

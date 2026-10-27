@@ -227,6 +227,7 @@ body.sticky-bottom-footer {
       margin-bottom: 0.65rem;
       color: var(--global-text-color);
       font-size: clamp(2rem, 3.2vw, 2.55rem);
+      font-family: "Source Sans 3", sans-serif;
       font-weight: 750;
       letter-spacing: 0;
       line-height: 1.12;
@@ -237,6 +238,7 @@ body.sticky-bottom-footer {
       max-width: 34rem;
       margin-bottom: 0;
       color: var(--global-text-color-light);
+      font-family: "Source Sans 3", sans-serif;
       font-size: 1rem !important;
       line-height: 1.55;
       letter-spacing: 0;
@@ -248,15 +250,17 @@ body.sticky-bottom-footer {
     margin: 0;
     float: none;
     justify-self: end;
+    position: relative;
+    z-index: 2;
   }
 
   .profile img.rounded-circle {
-    width: clamp(150px, 15vw, 185px);
+    width: clamp(150px, 15.5vw, 185px);
     object-position: center 38%;
   }
 
   .profile-avatar-status {
-    padding: 0.35rem;
+    padding: 0.25rem;
     border: 1px solid var(--global-divider-color);
     border-radius: 50%;
     background: var(--global-card-bg-color);
@@ -277,6 +281,8 @@ body.sticky-bottom-footer {
     margin-top: 1.25rem;
     padding-top: 0.6rem;
     border-top: 1px solid var(--global-divider-color);
+    position: relative;
+    z-index: 1;
 
     a {
       display: inline-flex;
@@ -289,8 +295,9 @@ body.sticky-bottom-footer {
       border: 1px solid var(--global-divider-color);
       border-radius: 0.45rem;
       background: var(--global-card-bg-color);
-      font-size: 0.78rem;
-      font-weight: 600;
+      font-family: "Source Sans 3", sans-serif;
+      font-size: 0.86rem;
+      font-weight: 650;
       line-height: 1.2;
       text-align: center;
       text-decoration: none;
@@ -335,6 +342,11 @@ body.sticky-bottom-footer {
   max-width: 900px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.research-interests-label {
+  color: var(--global-theme-color);
+  font-weight: 700;
 }
 
 @media (max-width: 767px) {
