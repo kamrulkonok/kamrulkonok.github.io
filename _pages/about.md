@@ -2,15 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lecturer in the Department of Computer Science and Data Science | AI Researcher
+subtitle: Lecturer in the Department of Computer Science and Data Science
 profile:
   align: right
   image: profile_photo.jpeg
   image_circular: true
   more_info: >
-    <p>American International University-Bangladesh (AIUB)<br>
-    408/1 (Old KA 66/1), Kuratoli<br>
-    Khilkhet, Dhaka 1229, Bangladesh</p>
+    <p>Dhaka, Bangladesh</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,46 +25,37 @@ latest_posts:
 ## <i class="fa-solid fa-user-graduate homepage-heading-icon" aria-hidden="true"></i> About Me
 <div class="homepage-about-intro" markdown="1">
 <p>
-  I am currently working as a Lecturer in the Departments of Computer Science and Data Science at
+  I am a Lecturer in Computer Science and Data Science at
   <a href="https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu">
     American International University-Bangladesh (AIUB)
   </a>.
+I completed the <a href="https://bdma.ulb.ac.be/">Erasmus Mundus Joint Master's degree in Big Data Management and Analytics (BDMA)</a> at <a href="https://www.centralesupelec.fr">CentraleSupélec</a>, and a Bachelor of Engineering in Software Engineering at <a href="https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm">Sichuan University</a>.
 </p>
 
 <p>
-  I completed the Erasmus Mundus Joint Master's Degree in
-  <a href="https://bdma.ulb.ac.be/">Big Data Management and Analytics (BDMA)</a>
-  at <a href="https://www.centralesupelec.fr">CentraleSupélec</a>.
-  During my master's, I worked at the Images, Signals and Intelligent Systems Laboratory, in close collaboration with
+  During my master's, I conducted research at the Images, Signals and Intelligent
+  Systems Laboratory in collaboration with
   <a href="https://list.cea.fr/en/">CEA-LIST</a>, under the supervision of
-  <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Tiphaine Henry</a>.
-  Before that, I earned a B.Eng. in Software Engineering from
-  <a href="https://sw.scu.edu.cn/e_rjxy/info/1167/1064.htm">Sichuan University</a>.
-</p>
-
-<p>
-  My research journey began with deep learning for medical image analysis and later
-  expanded into geometric deep learning for large-scale medical imaging. My master's
-  research focused on using large language models (LLMs) and retrieval-augmented
+  <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Dr. Tiphaine Henry</a>.
+  My research journey began with deep learning for medical image analysis,
+  progressed to geometric deep learning for large-scale medical imaging, and
+  later expanded to using large language models (LLMs) and retrieval-augmented
   generation (RAG) to automate security annotation in business process models.
 </p>
 
 <p>
-  Building on these experiences, my current research interests focus on foundation
-  models, information retrieval, agentic AI, and multimodal learning. I am particularly
-  interested in developing intelligent systems that can retrieve relevant information,
-  reason over structured knowledge, and perform complex tasks reliably.
+  My research interests include foundation models, information retrieval,
+  agentic AI, and multimodal AI. I am particularly interested in building
+  intelligent systems that retrieve relevant information, reason over structured
+  knowledge, and reliably perform complex tasks.
 </p>
-</div>
 
 <p>
-  I am from Rajshahi, Bangladesh, and have had the good fortune to live and study in
-  several places, including France, Spain, Belgium, and China. I am an avid tennis
-  player and enjoy travelling around the world, hiking, and trying new foods.
+Originally from a beautiful village in northern Bangladesh, I have had the opportunity to live and study in France, Spain, Belgium, and China. Beyond academia, I enjoy playing tennis, travelling, hiking, exploring different cultures, and discovering new cuisines.
 </p>
 
 <blockquote class="collab-note">
-  <p><strong>Always happy to connect, exchange ideas, and explore potential collaborations.</strong></p>
+  <p><strong>Always learning, exploring ideas that make a difference, and happy to collaborate.</strong></p>
   <p>
     <i class="fa-solid fa-envelope" aria-hidden="true"></i>
     <a href="mailto:mdkamrul.islam@aiub.edu">mdkamrul.islam@aiub.edu</a>
@@ -81,7 +70,7 @@ My research experience includes work across language models, information retriev
 
 - **Master’s Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, published at the [BPM Forum of the 24th International Conference on Business Process Management (BPM 2026)](https://link.springer.com/chapter/10.1007/978-3-032-37877-4_10). Supervisor: [Dr. Tiphaine Henry](https://scholar.google.com/citations?user=dCNZa1kAAAAJ&hl=fr). The work investigates LLMs and RAG for automated security annotation of BPMN 2.0 models. [[ArXiv]](https://arxiv.org/abs/2608.14370)
   
-- **Graduate Research Assistant:** Developed unsupervised deep clustering frameworks based on group-equivariant CNNs using a large-scale chest X-ray dataset to improve feature representation and cluster separability while reducing reliance on data augmentation. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
+- **Graduate Research Assistant:** Developed *Unsupervised Chest X-ray Clustering with Group Equivariant Convolutions*, exploring unsupervised chest X-ray clustering using group-equivariant convolutional neural networks. The work was listed as a workshop poster abstract in the RAMH 2026 booklet. See project: [Unsupervised chest X-ray clustering with group-equivariant convolutions]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
   
 - **Undergraduate Thesis:** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [Brain Tumor Detection and Classification Using Convolutional Neural Networks]({{ '/research-work/16_brain_tumor_cnn/' | relative_url }}).
 

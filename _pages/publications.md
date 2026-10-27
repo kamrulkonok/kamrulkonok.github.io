@@ -12,8 +12,17 @@ nav_order: 2
 
 {% include bib_search.liquid %}
 
-<div class="publications">
+<section aria-labelledby="preprints-heading">
+	<h2 id="preprints-heading">Preprints</h2>
 
-{% bibliography %}
+	<div class="publications">
+		{% bibliography %}
+	</div>
 
-</div>
+	<section aria-labelledby="workshop-poster-abstracts-heading">
+		<h3 id="workshop-poster-abstracts-heading">Workshop Poster Abstracts</h3>
+		<div class="publications">
+			{% bibliography -f workshops %}
+		</div>
+	</section>
+</section>

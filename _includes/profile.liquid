@@ -1,0 +1,48 @@
+<div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+  {% if page.profile.image %}
+    {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+    {% if page.profile.image_circular %}
+      {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+    {% else %}
+      {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+    {% endif %}
+    {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+    <div class="profile-avatar-status">
+      {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image cache_bust=true %}
+      <span class="online-indicator" aria-label="Active" title="Active"></span>
+    </div>
+  {% endif %}
+  {% if page.profile.more_info %}
+    <div class="more-info">
+      {% assign info_content = page.profile.more_info %}
+      {% assign paragraphs = info_content | split: '<p>' %}
+      {% for para in paragraphs %}
+        {% if para != blank and para != info_content %}
+          {% assign clean_para = para | replace: '</p>', '' | strip %}
+          {% if clean_para != blank %}
+            {% if clean_para contains 'mailto:' %}
+              {% assign email_start = clean_para | split: 'mailto:' | last %}
+              {% assign email_part = email_start | split: '"' | first %}
+              {% assign email_text_start = clean_para | split: '>' | last %}
+              {% assign email_text = email_text_start | split: '<' | first %}
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:{{ email_part }}">{{ email_text }}</a>
+              </div>
+            {% elsif clean_para contains '+' %}
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>{{ clean_para }}</span>
+              </div>
+            {% else %}
+              <div class="contact-item">
+                <i class="fa-solid fa-map-marker-alt"></i>
+                <span>{{ clean_para }}</span>
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

@@ -248,6 +248,10 @@ ul.task-list input[type="checkbox"] {
       }
     }
   }
+
+  .profile.float-right {
+    margin-top: clamp(4rem, 6vw, 6rem);
+  }
 }
 
 .post-description {

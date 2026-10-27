@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Joined <a href="https://www.aiub.edu/" target="_blank">American International University-Bangladesh (AIUB)</a> as a Lecturer in the Department of Computer Science.
+Joined <a href="https://www.aiub.edu/" target="_blank">American International University-Bangladesh (AIUB)</a> as a Lecturer in the Department of Computer Science and Department of Data Science.

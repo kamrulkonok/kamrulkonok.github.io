@@ -23,8 +23,12 @@ authors_list:
 authors_affiliation: "¹ CentraleSupélec, Université Paris-Saclay, France"
 paper_url: https://zenodo.org/records/17494110
 code_url: https://github.com/kamrulkonok/BDRP
-dataset_url: https://www.kaggle.com/datasets/nih-chest-xrays/data
 poster_url: https://www.figma.com/design/BhUBCyU91Kqdf4kztyEmB3/ML-for-Healthcare-Workshop?node-id=4-89&t=ruXWgqMXt5CQXICw-1
+workshop_name: Recent Advances in Machine Learning for Healthcare (RAMH 2026) Workshop
+workshop_date: January 27, 2026
+workshop_location: Paris, France
+workshop_record_url: https://inria.hal.science/hal-05789640
+workshop_booklet_url: https://inria.hal.science/hal-05789640/file/ramh2026_booklet.pdf
 nav_hide_motivation_dataset: true
 teaser_image: assets/img/publication_preview/bdrp/gcnn_clustering_architecture.jpg
 teaser_caption: "Proposed  Deep Clustering with the Group Equivariant Convolutional Network Pipeline for Chest X-ray Images."
@@ -51,13 +55,11 @@ This project builds upon the **DeepCluster** framework introduced in *Deep Clust
 
 #### Data preparation
 
-Experiments are conducted on the **NIH Chest X-ray** dataset. Chest X-rays are among the most frequent and cost-effective medical imaging exams, but large publicly available labeled datasets have been scarce, limiting progress in computer-aided detection. The NIH dataset comprises **112,120** frontal X-ray images from **30,805** unique patients.
+Experiments are conducted on the [**NIH Chest X-ray** dataset](https://www.kaggle.com/datasets/nih-chest-xrays/data). Chest X-rays are among the most frequent and cost-effective medical imaging exams, but large publicly available labeled datasets have been scarce, limiting progress in computer-aided detection. The NIH dataset comprises **112,120** frontal X-ray images from **30,805** unique patients.
 
 <figure class="figure results-figure mt-3">
-  <a href="https://www.kaggle.com/datasets/nih-chest-xrays/data" target="_blank" rel="noopener noreferrer">
-    <img src="{{ 'assets/img/publication_preview/bdrp/nih_xray_dataset.png' | relative_url }}" alt="NIH Chest X-ray dataset, sample per disease" class="figure-img img-fluid rounded" loading="lazy" />
-  </a>
-  <figcaption class="figure-caption text-center mt-2"><strong>NIH Chest X-ray dataset.</strong> Sample images per disease category. <a href="https://www.kaggle.com/datasets/nih-chest-xrays/data" target="_blank" rel="noopener noreferrer">Dataset (Kaggle)</a>.</figcaption>
+  <img src="{{ 'assets/img/publication_preview/bdrp/nih_xray_dataset.png' | relative_url }}" alt="NIH Chest X-ray dataset, sample per disease" class="figure-img img-fluid rounded" loading="lazy" />
+  <figcaption class="figure-caption text-center mt-2"><strong>NIH Chest X-ray dataset.</strong> Sample images per disease category.</figcaption>
 </figure>
 
 For **unsupervised** clustering, we remove the disease labels and use only the images. All images are resized to **64 × 64** pixels and normalized to the range **[−1, 1]** to ensure consistent input across models.

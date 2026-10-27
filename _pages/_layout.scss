@@ -89,12 +89,12 @@ body.sticky-bottom-footer {
   }
 
   img.rounded-circle {
-    width: clamp(190px, 24vw, 260px);
+    width: clamp(210px, 26vw, 280px);
     aspect-ratio: 1 / 1;
     height: auto;
     max-height: none;
     object-fit: cover;
-    object-position: center 16%;
+    object-position: center 38%;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -137,8 +137,8 @@ body.sticky-bottom-footer {
   }
   
   .more-info {
-    margin-top: 1.75rem;
-    padding-top: 1.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
     border-top: 2px solid var(--global-divider-color);
     position: relative;
     text-align: center;
@@ -202,6 +202,146 @@ body.sticky-bottom-footer {
         color: var(--global-text-color);
         word-break: break-word;
       }
+    }
+  }
+}
+
+.about-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 195px);
+  align-items: start;
+  gap: 0.9rem;
+  margin-bottom: 0.5rem;
+
+  .about-header-copy {
+    min-width: 0;
+
+    .post-title {
+      margin-bottom: 0.65rem;
+      color: var(--global-text-color);
+      font-size: clamp(2rem, 3.2vw, 2.55rem);
+      font-weight: 750;
+      letter-spacing: 0;
+      line-height: 1.12;
+      text-transform: none;
+    }
+
+    .desc {
+      max-width: 34rem;
+      margin-bottom: 0;
+      color: var(--global-text-color-light);
+      font-size: 1rem !important;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+  }
+
+  > .profile {
+    width: auto;
+    margin: 0;
+    float: none;
+    justify-self: end;
+  }
+
+  .profile img.rounded-circle {
+    width: clamp(150px, 15vw, 185px);
+    object-position: center 38%;
+  }
+
+  .profile-avatar-status {
+    padding: 0.35rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 50%;
+    background: var(--global-card-bg-color);
+    box-shadow: 0 8px 20px rgba(35, 45, 55, 0.12);
+  }
+
+  .profile .more-info {
+    width: 100%;
+    margin-top: 0.45rem;
+    padding-top: 0.45rem;
+  }
+
+  .about-header-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-self: start;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--global-divider-color);
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      min-height: 2.3rem;
+      padding: 0.4rem 0.5rem;
+      color: var(--global-text-color);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 0.45rem;
+      background: var(--global-card-bg-color);
+      font-size: 0.78rem;
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+
+      i {
+        flex: 0 0 auto;
+        color: var(--global-theme-color);
+        font-size: 0.95rem;
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+        background: color-mix(in srgb, var(--global-theme-color) 6%, var(--global-card-bg-color));
+        text-decoration: none;
+        transform: translateY(-1px);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--global-theme-color);
+        outline-offset: 2px;
+      }
+    }
+  }
+}
+
+.post-header.about-page-header {
+  min-height: 0;
+  height: auto;
+  margin-bottom: 1.25rem;
+  padding: 0.65rem 0.9rem 0.7rem;
+
+  .about-header > .profile.float-right {
+    margin: 0;
+  }
+}
+
+.about-content {
+  width: 100%;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .about-header {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+
+    > .profile {
+      justify-self: center;
+    }
+
+    .about-header-links {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 }
@@ -357,6 +497,30 @@ body.sticky-bottom-footer {
         background-color: rgba(0, 168, 107, 0.06);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
       }
+    }
+  }
+
+  .project-workshop-record {
+    max-width: 48rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid var(--global-divider-color);
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 0.5rem;
+    background: var(--global-card-bg-color);
+    text-align: center;
+
+    p {
+      color: var(--global-text-color-light);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    strong {
+      color: var(--global-text-color);
+      font-size: 0.95rem;
+      letter-spacing: 0;
     }
   }
 }
