@@ -22,13 +22,7 @@ latest_posts:
 
 ## <i class="fa-solid fa-user-graduate homepage-heading-icon" aria-hidden="true"></i> About Me
 <div class="homepage-about-intro" markdown="1">
-<p>
-  I am a Lecturer in Computer Science and Data Science at
-  American International University-Bangladesh (AIUB)
-  (<a href="https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu">Faculty Profile</a>),
-  with research focused on applied AI.
-</p>
-
+I am a Lecturer in Computer Science and Data Science at American International University-Bangladesh (AIUB) (<a href="https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu">Faculty Profile</a>), with a research interest in building intelligent and reliable AI systems.
 <p>
   I completed the <a href="https://bdma.ulb.ac.be/">Erasmus Mundus Joint Master
   Degree in Big Data Management and Analytics (BDMA)</a> and earned a
@@ -46,15 +40,15 @@ latest_posts:
 </p>
 
 <p>
-  <strong class="research-interests-label">Research Interests:</strong> <strong>Foundation models, information retrieval, agentic AI, and multimodal AI.</strong>
+  <strong class="research-interests-label">Research Interests:</strong> <strong>Foundation models, information retrieval, agentic AI, efficient language models, and multimodal AI.</strong>
   I am particularly interested in building intelligent systems that retrieve
   relevant information, reason over structured knowledge, and reliably
   perform complex tasks.
 </p>
 
-<p>
+<!-- <p>
 Originally from a beautiful village in northern Bangladesh, I have had the opportunity to live and study in France, Spain, Belgium, and China. Beyond academia, I enjoy playing tennis, travelling, hiking, exploring different cultures, and discovering new cuisines.
-</p>
+</p> -->
 
 <blockquote class="collab-note">
   <p><strong>Always learning, exploring ideas that make a difference, and happy to collaborate.</strong></p>
@@ -81,14 +75,19 @@ My research experience includes work across language models, information retriev
     <div class="homepage-section-heading">
       <h2 id="experience-heading"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience
       </h2>
-      <a href="{{ '/assets/pdf/CV_Research_Engineer_Kamrul.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download CV</a>
+      <a href="{{ '/assets/pdf/CV_Md_Kamrul_Islam.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download CV</a>
     </div>
     <div class="homepage-experience-timeline" aria-labelledby="experience-heading">
       <article class="homepage-timeline-entry">
+        <h3>Research Collaborator (Remote)</h3>
+        <p class="homepage-experience-meta">University of Bergamo<br>Bergamo, Italy</p>
+        <time>Oct 2026 – Present</time>
+      </article>
+    <article class="homepage-timeline-entry">
         <h3>Lecturer</h3>
         <p class="homepage-experience-meta">American International University-Bangladesh (AIUB)
         <br>Dhaka, Bangladesh</p>
-        <time>April 2026 – Present</time>
+        <time>Apr 2026 – Present</time>
       </article>
 
       <article class="homepage-timeline-entry">
@@ -106,7 +105,7 @@ My research experience includes work across language models, information retriev
       </article>
 
       <article class="homepage-timeline-entry">
-        <h3>Big Data Engineer Intern</h3>
+        <h3>Software Engineer Intern</h3>
         <p class="homepage-experience-meta">Chengdu Suncape Data Co., Ltd <br>Chengdu, China</p>
         <time>Dec 2020 – May 2021</time>
       </article>

@@ -56,7 +56,7 @@ nav_order: 5
 <div class="adventure-map-shell">
   <div class="adventure-map-frame">
     <iframe
-      src="https://www.google.com/maps/d/u/0/embed?mid=1y-hszeuJ6pXkxH2z5rfPtehrBU-kzuo&ehbc=2E312F"
+      src="https://www.google.com/maps/d/u/0/embed?mid=1y-hszeuJ6pXkxH2z5rfPtehrBU-kzuo&ehbc=2E312F&hl=en"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
       title="Adventure locations map"
