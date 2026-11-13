@@ -79,7 +79,7 @@ My research experience includes work across language models, information retriev
     </div>
     <div class="homepage-experience-timeline" aria-labelledby="experience-heading">
       <article class="homepage-timeline-entry">
-        <h3>Research Collaborator (Remote)</h3>
+        <h3>Research Collaborations (Remote)</h3>
         <p class="homepage-experience-meta">University of Bergamo<br>Bergamo, Italy</p>
         <time>Oct 2026 – Present</time>
       </article>
