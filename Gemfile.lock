@@ -170,9 +170,6 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-tabs (1.2.1)
       jekyll (>= 3.0, < 5.0)
-    jekyll-toc (0.19.0)
-      jekyll (>= 3.9)
-      nokogiri (~> 1.12)
     jekyll-twitter-plugin (2.1.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
@@ -306,7 +303,6 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-tabs
   jekyll-terser!
-  jekyll-toc
   jekyll-twitter-plugin
   jemoji
   observer

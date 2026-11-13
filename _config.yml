@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Md Kamrul
-middle_name: 
+middle_name:
 last_name: Islam
 contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -211,7 +211,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-tabs
   - jekyll-terser
-  - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
 
@@ -622,7 +621,6 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
-
 # -----------------------------------------------------------------------------
 # Get external JSON data
 # -----------------------------------------------------------------------------
