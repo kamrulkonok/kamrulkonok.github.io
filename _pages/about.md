@@ -36,7 +36,9 @@ I am a Lecturer in Computer Science and Data Science at American International U
   <a href="https://list.cea.fr/en/">CEA-LIST</a>, under the supervision of <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Dr. Tiphaine Henry</a>. My research has taken me from deep learning for medical image analysis and
   geometric deep learning to exploring how large language models (LLMs) and retrieval-augmented generation (RAG) can extract security requirements and automate security annotation generation for business process models.
 </p>
-
+<p>
+  My research interests lie in natural language processing, foundation models, knowledge retrieval and generation, with a growing interest in Agentic AI. I am currently exploring how agentic AI can support information security policy analysis and business process modeling. My previous work includes knowledge graphs, large language models, and retrieval-augmented generation.
+</p>
 <p>
   <strong class="research-interests-label">Research Interests:</strong> <strong>Foundation models, information retrieval, agentic AI, AI Safety and Security, and multimodal AI.</strong>
 </p>
