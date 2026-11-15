@@ -32,12 +32,9 @@ I am a Lecturer in Computer Science and Data Science at American International U
 </p>
 <p>
   As part of my master's thesis, I worked as a Research Engineer Intern at the
-  Images, Signals and Intelligent Systems Laboratory in collaboration with
-  <a href="https://list.cea.fr/en/">CEA-LIST</a>, under the supervision of
-  <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Dr. Tiphaine Henry</a>. My research has taken me from deep learning for medical image analysis and
-  geometric deep learning to exploring how large language models (LLMs) and
-  retrieval-augmented generation (RAG) can extract security requirements and
-  automate security annotation generation for business process models.
+  Université Paris-Est Créteil in collaboration with
+  <a href="https://list.cea.fr/en/">CEA-LIST</a>, under the supervision of <a href="https://www.researchgate.net/profile/Tiphaine-Henry">Dr. Tiphaine Henry</a>. My research has taken me from deep learning for medical image analysis and
+  geometric deep learning to exploring how large language models (LLMs) and retrieval-augmented generation (RAG) can extract security requirements and automate security annotation generation for business process models.
 </p>
 
 <p>
