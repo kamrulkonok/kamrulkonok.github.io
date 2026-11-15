@@ -21,6 +21,7 @@ latest_posts:
 ---
 
 ## <i class="fa-solid fa-user-graduate homepage-heading-icon" aria-hidden="true"></i> About Me
+
 <div class="homepage-about-intro" markdown="1">
 I am a Lecturer in Computer Science and Data Science at American International University-Bangladesh (AIUB) (<a href="https://www.aiub.edu/faculty-list/faculty-profile?q=mdkamrul.islam#mdkamrul.islam@aiub.edu">Faculty Profile</a>), with a research interest in building intelligent and reliable AI systems.
 <p>
@@ -40,16 +41,8 @@ I am a Lecturer in Computer Science and Data Science at American International U
 </p>
 
 <p>
-  <strong class="research-interests-label">Research Interests:</strong> <strong>Foundation models, information retrieval, agentic AI, efficient language models, and multimodal AI.</strong>
-  I am particularly interested in building intelligent systems that retrieve
-  relevant information, reason over structured knowledge, and reliably
-  perform complex tasks.
+  <strong class="research-interests-label">Research Interests:</strong> <strong>Foundation models, information retrieval, agentic AI, AI Safety and Security, and multimodal AI.</strong>
 </p>
-
-<!-- <p>
-Originally from a beautiful village in northern Bangladesh, I have had the opportunity to live and study in France, Spain, Belgium, and China. Beyond academia, I enjoy playing tennis, travelling, hiking, exploring different cultures, and discovering new cuisines.
-</p> -->
-
 <blockquote class="collab-note">
   <p><strong>Always learning, exploring ideas that make a difference, and happy to collaborate.</strong></p>
   <p>
@@ -64,10 +57,8 @@ Originally from a beautiful village in northern Bangladesh, I have had the oppor
 
 My research experience includes work across language models, information retrieval, and deep learning:
 
-- **Master's Thesis:** *A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models*, published as a book chapter in the proceedings of the **24th International Conference on Business Process Management (BPM 2026)**, as part of the *BPM Forum*. [[Book Chapter]](https://link.springer.com/chapter/10.1007/978-3-032-37877-4_10) • [[arXiv Preprint]](https://arxiv.org/abs/2608.14370)
-  
-- **Graduate Research Assistant:** *Unsupervised Chest X-ray Clustering with Group Equivariant Convolutions*. Explored unsupervised chest X-ray clustering using group-equivariant CNNs. The work was presented at the [Recent Advances in Machine Learning for Healthcare (RAMH 2026)](https://inria.hal.science/hal-05789640) workshop and included in its [[Workshop Booklet]](https://inria.hal.science/hal-05789640/file/ramh2026_booklet.pdf) • [[View project]]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
-  
+- **Master's Thesis:** _A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models_, published as a book chapter in the proceedings of the **24th International Conference on Business Process Management (BPM 2026)**, as part of the _BPM Forum_. [[Book Chapter]](https://link.springer.com/chapter/10.1007/978-3-032-37877-4_10) • [[arXiv Preprint]](https://arxiv.org/abs/2608.14370)
+- **Graduate Research Assistant:** _Unsupervised Chest X-ray Clustering with Group Equivariant Convolutions_. Explored unsupervised chest X-ray clustering using group-equivariant CNNs. The work was presented at the [Recent Advances in Machine Learning for Healthcare (RAMH 2026)](https://inria.hal.science/hal-05789640) workshop and included in its [[Workshop Booklet]](https://inria.hal.science/hal-05789640/file/ramh2026_booklet.pdf) • [[View project]]({{ '/research-work/15_bdrp_geometric_deep_learning/' | relative_url }}).
 - **Undergraduate Thesis:** Designed and trained CNN architectures for multi-class tumor classification from brain MRI scans, with a focus on preprocessing, evaluation metrics, and robustness. See project: [Brain Tumor Detection and Classification Using Convolutional Neural Networks]({{ '/research-work/16_brain_tumor_cnn/' | relative_url }}).
 
 <section class="homepage-experience-card" aria-label="Experience, teaching, and service">
@@ -160,5 +151,6 @@ My research experience includes work across language models, information retriev
         <p>4th International Conference on Computing Advancements (ICCA 2026)</p>
       </div>
     </section>
+
   </div>
 </section>
